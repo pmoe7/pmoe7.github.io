@@ -1,0 +1,288 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:400,500,600,700);
+html,
+body {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.8;
+    color: #000;
+	overflow: hidden;
+}
+.overlay {
+	height: 0%;
+	width: 100%;
+	position: absolute; 
+	z-index: 10;
+	top: 10%;
+	transition: all 1s;
+	overflow: hidden;
+}	
+
+.overlay a{
+	text-decoration: none;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #818181;
+}
+
+
+.overlay .closebtn {
+	visibility: hidden;
+	padding: 8px;
+    text-decoration: none;
+    transition: 0.3s; 
+	color: #000;
+	position: fixed;
+    left: 65%;
+	margin-top: 1.5%;
+	z-index: 100;
+    font-size: 60px;
+}
+
+
+#git {
+	font-size: 14px;
+	text-align: right;
+}
+
+.project-title {
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	position: relative;
+	width: 60%;
+	left: 20%;
+	padding: 12px;
+	padding-top: 5px;
+	border-top-right-radius: 20px;
+	border-top-left-radius: 20px;
+	margin-top: 50px;
+	margin-bottom: -20px;
+}
+
+.bg-grad {
+	background-image: linear-gradient(to right, #314755 0%, #26a0da 51%, #314755 100%)
+}
+
+.bg-grad-1 {background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA 51%, #77A1D3 100%)}
+
+.bg-grad-2 {background-image: linear-gradient(to right, #2b5876 0%, #4e4376 51%, #2b5876 100%)}
+
+.bg-grad-3 {background-image: linear-gradient(to right, #02AAB0 0%, #00CDAC 51%, #02AAB0 100%)}
+
+.bg-grad-4 {background-image: linear-gradient(to right, #2BC0E4 0%, #EAECC6 51%, #2BC0E4 100%)}
+
+.bg-grad-5 {background-image: linear-gradient(to right, #24C6DC 0%, #514A9D 51%, #24C6DC 100%)}
+
+.bg-grad-6 {background-image: linear-gradient(to right, #1CD8D2 0%, #93EDC7 51%, #1CD8D2 100%)}
+
+.txt-grad {background: #fff;}
+
+.img-rnd {
+	flex: 1 1 auto;
+	margin: 10px;
+	padding: 10px;
+	text-align: center;
+	text-transform: uppercase;
+	transition: 0.5s;
+	background-size: 200% auto;
+	color: #333;
+	/* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+	box-shadow: 0 0 20px #eee;
+	border-radius: 10px;
+ }
+
+/* Slideshow container */
+.slideshow-container {
+	position: relative;
+	width: 60%;
+	left: 20%;
+}
+
+/* Slides */
+.mySlides {
+	display: none;
+	padding: 80px;
+	padding-top: 30px;
+	background-size: 100% auto;
+	text-align: left;
+	transition: 0.5s;
+	
+}
+.slide-title{
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(169,169,169,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+	position: relative;
+	text-align: center;
+	padding: 20px;
+  	width: 60%;
+	left: 20%;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: italic;}
+
+/* Add a blue color to the author */
+.author {color: cornflowerblue;}
+
+
+.max_width {
+	position: absolute;
+	left: 40%;
+	width: 20%;
+}
+
+
+
+/* Smartphones (portrait and landscape) ----------- */
+
+/* #### Mobile Phones Portrait #### */
+@media screen and (max-device-width: 480px) and (orientation: portrait){
+	body{
+		overflow: hidden;
+	}
+	.overlay {
+		height: 0%;
+		width: 100%;
+		position: absolute; 
+		z-index: 10;
+		top: 5%;
+		transition: all 1s;
+		overflow: scroll;
+	}
+    .overlay a {
+		color: #fff;
+	}
+    .overlay .closebtn {
+        font-size: 30px;
+		margin-top: 14%;
+		margin-left: 3%;
+    }
+	.mouse {
+		position: absolute;
+		bottom: 10px;
+		left: 35%;
+	}
+	.project-title {
+		font-size: 20px;
+		width: 100%;
+	}
+	.project-title h2{
+		font-size: 20px;
+	}
+	/* Slideshow container */
+	.slideshow-container {
+		position: relative;
+		width: 100%;
+	}
+	.dot-container {
+		width: 100%;
+	}
+	
+	.mySlides h2{
+		font-size: 18px;
+	}
+
+	.max_width {
+		position: absolute;
+		left: 10%;
+		width: 80%;
+		top: 20%;
+		overflow: hidden;
+	}
+
+	
+}
+
+/*
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  	.overlay {
+		top: 0%;
+	}
+
+	.overlay .closebtn {
+		margin-top: 1.3%;
+		margin-left: 0%;
+    }
+  
+}
+
+// Desktops
+@media (min-width: 1280) and (max-width: 1920px) {
+  	.overlay {
+		top: -20%;
+	}
+
+	.overlay .closebtn {
+		margin-top: 1.3%;
+		margin-left: -5%;
+    }
+  
+}
+
+
+
+/* #### LAPTOPS #### */
+@media screen and (max-height: 1080px){
+	.overlay {
+		top: -5%;
+	}
+
+	.overlay .closebtn {
+		margin-top: 1.5%;
+		margin-left: 3%;
+    }	
+}
