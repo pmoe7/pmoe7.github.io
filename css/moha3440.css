@@ -1,0 +1,225 @@
+body {
+	background-image: url(images/bg.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+	background-color: #ffffff;
+	margin: auto;
+	padding: 0px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 150%;
+	text-align: center;
+	}
+	
+a {
+	color: #5aadc6;
+	text-decoration: none;
+	}
+	
+a.hover {
+	color: #ffffff;
+	text-decoration: underline;
+	}
+	
+#header_news a {
+	color: #ffffff;
+	text-decoration: none;
+	}
+	
+#header_news a:hover {
+	color: #ffffff;
+	text-decoration: underline;
+	}
+	
+/*================================================*/
+/*=TEMPLATE=STYLES================================*/
+/*================================================*/
+
+#container {
+	width: 910px;
+	margin: auto;
+	text-align: left;
+	padding-bottom: 30px;
+	}
+
+#header_news {
+	width: 850px;
+	height: 40px;
+	background-image: url(images/header_news_bg.gif);
+	background-repeat: no-repeat;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 12px;
+	color: #ffffff;
+	text-align: center;
+	}
+	
+#header {
+	width: 638px;
+	height: 43px;
+	background-image: url(images/header.jpg);
+	background-repeat: no-repeat;
+	padding-bottom: 0px;
+	padding-left: 137px;
+	padding-right: 155px;
+	padding-top: 203px;
+	}
+	
+#content {
+	width: 881px;
+	background-image: url(images/content_bg.gif);
+	background-repeat: repeat-y;
+	padding-left: 15px;
+	padding-right: 15px;
+	overflow: hidden;
+	padding-bottom: 10px;
+	}
+	
+#content_left {
+	float: left;
+	width: 260px;
+	}
+	
+#content_right {
+	float: right;
+	width: 610px;
+	}	
+	
+.sidebar_box {
+	width: 260px;
+	overflow: hidden;
+	}
+	
+.sidebar_box_top {
+	width: 220px;
+	height: 20px;
+	background-image: url(images/sidebar_top.gif);
+	background-repeat: no-repeat;
+	color: #ffffff;
+	padding-bottom: 5px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 23px;
+	text-align: center;
+	}
+	
+.sidebar_box_middle {
+	width: 230px;
+	background-image: url(images/sidebar_middle.gif);
+	background-repeat: repeat-y;
+	padding-left: 15px;
+	padding-right: 15px;
+	}
+	
+.sidebar_box_bottom {
+	width: 260px;
+	height: 26px;
+	background-image: url(images/sidebar_bottom.gif);
+	background-repeat: no-repeat;
+	}
+	
+.content_box {
+	width: 610px;
+	overflow: hidden;
+	}
+	
+.content_box_top {
+	width: 570px;
+	height: 20px;
+	background-image: url(images/main_box_top.gif);
+	background-repeat: no-repeat;
+	color: #ffffff;
+	padding-bottom: 5px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 23px;
+	text-align: center;
+	}
+	
+.content_box_middle {
+	width: 580px;
+	background-image: url(images/main_box_middle.gif);
+	background-repeat: repeat-y;
+	padding-left: 15px;
+	padding-right: 15px;
+	}
+	
+.content_box_bottom {
+	width: 610px;
+	height: 26px;
+	background-image: url(images/main_box_bottom.gif);
+	background-repeat: no-repeat;
+	}
+	
+#footer {
+	width: 870px;
+	height: 121px;
+	background-image: url(images/footer_bg.gif);
+	background-repeat: no-repeat;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 30px;
+	}
+	
+/*================================================*/
+/*=NAVIGAION=STYLES===============================*/
+/*================================================*/
+
+.nav {
+	float: left;
+	display: inline;
+	list-style: none;
+	width:  144px;
+	height: 30px;
+	margin-left: 0;
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 10px;
+	color: #ffffff;
+	text-align: center;
+	text-decoration: none;
+	background-image: url(images/nav.gif);
+	background-repeat: no-repeat;
+	}
+	
+.nav:hover {
+	float: left;
+	display: inline;
+	list-style: none;
+	width:  144px;
+	height: 23px;
+	margin-left: 0;
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 17px;
+	color: #ffffff;
+	text-align: center;
+	text-decoration: none;
+	background-image: url(images/nav_over.gif);
+	background-repeat: no-repeat;
+	}
+	
+.nav_over {
+	float: left;
+	display: inline;
+	list-style: none;
+	width:  144px;
+	height: 23px;
+	margin-left: 0;
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 17px;
+	color: #ffffff;
+	text-align: center;
+	text-decoration: none;
+	background-image: url(images/nav_over.gif);
+	background-repeat: no-repeat;
+}
+
+#purpose{
+	display: none;
+}
+
+#data{
+	display: none;
+}
