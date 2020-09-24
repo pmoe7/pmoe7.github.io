@@ -28,7 +28,7 @@ header {
 }
 
 h2 span, h1 span {
-    color: #bd8cbf;
+    color: #24477f;
 }
 
 li {
@@ -57,14 +57,15 @@ nav.navbar {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: transparent;
+    background-color: #fff;
+    color: #24477f;
     width: 100%;
     z-index: 1000;
     font-family: 'Open Sans', sans-serif;
 }
 
 nav.navbar a, nav.navbar ul li a {
-    color: #FFF !important;
+    color: #24477f !important;
 }
 
 nav.navbar ul li {
@@ -83,12 +84,6 @@ nav.navbar form {
     display: none;
 }
 
-nav.navbar form input {
-    padding: 5px 10px;
-    border: 1px solid #b7b5b5;
-    background-color: #e6e3e3;
-    width: 100%;
-}
 
 /* header */
 
@@ -128,8 +123,8 @@ header button a {
 }
 
 header button:hover {
-    background-color: #bd8cbf;
-    border: 1px solid #bd8cbf;
+    background-color: #24477f;
+    border: 1px solid #24477f;
 }
 
 header button:hover a {
@@ -166,7 +161,7 @@ header button:hover a {
 }
 
 .about-us .small-container > p + div button {
-    background-color: #bd8cbf;
+    background-color: #24477f;
     border: none;
 }
 
@@ -180,7 +175,7 @@ header button:hover a {
     width: 200px;
     position: absolute;
     color: white;
-    background-color: #bd8cbf;
+    background-color: #24477f;
 }
 
 .about-us .item p {
@@ -236,7 +231,7 @@ header button:hover a {
     width: 100px;
     height: 200px;
     position: absolute;
-    background-color: #bd8cbf;
+    background-color: #24477f;
     top: 140px;
     z-index: -5;
 }
@@ -245,7 +240,7 @@ header button:hover a {
     width: 100px;
     height: 200px;
     position: absolute;
-    background-color: #bd8cbf;
+    background-color: #24477f;
     bottom: 58px;
     right: 34px;
     z-index: -5;
@@ -254,7 +249,7 @@ header button:hover a {
 .about-us .row > div > .item:nth-of-type(3) div {
     position: relative;
     z-index: 5;
-    background-color: #bd8cbf;
+    background-color: #24477f;
     padding: 5px;
 }
 
@@ -283,7 +278,7 @@ header button:hover a {
 .services .carousel-control-next, .services .carousel-control-prev {
     width: 60px;
     height: 60px;
-    background: #bd8cbf;
+    background: #24477f;
     border-radius: 50%;
 }
 
@@ -304,7 +299,7 @@ header button:hover a {
 }
 
 .services i {
-    color: #bd8cbf;
+    color: #24477f;
 }
 
 /* agency */
@@ -355,7 +350,7 @@ header button:hover a {
 }
 
 .statistics i, .statistics p {
-    color: #bd8cbf;
+    color: #24477f;
 }
 
 .statistics i {
@@ -428,7 +423,7 @@ footer {
 }
 
 footer a:hover {
-    color: #bd8cbf
+    color: #24477f
 }
 
 footer .container > ul {
