@@ -459,7 +459,7 @@ b i:last-child {
 	text-transform: uppercase;
 	transition: 0.5s;
 	background-size: 200% auto;
-	color: #333;
+	color: #fff;
 	/* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
 	box-shadow: 0 0 20px #eee;
 	border-radius: 10px;
@@ -473,7 +473,7 @@ b i:last-child {
 /* <- Magic Stuff Start */
 
 .btn:hover {
-	color: white;
+	color: #333;
 	background-position: right center; /* change the direction of the change here */
 }
 
@@ -1147,22 +1147,6 @@ textarea:focus {
     background: #F5B700;
     color: #fff;
 }
-
-
-/* Style buttons */
-.btn {
-    background-color: DodgerBlue; /* Blue background */
-    border: none; /* Remove borders */
-    color: white; /* White text */
-    padding: 12px 16px; /* Some padding */
-    font-size: 16px; /* Set a font size */
-    cursor: pointer; /* Mouse pointer on hover */
-  }
-  
-  /* Darker background on mouse-over */
-  .btn:hover {
-    background-color: RoyalBlue;
-  }
 
 /* single project page
 ==================================================*/
