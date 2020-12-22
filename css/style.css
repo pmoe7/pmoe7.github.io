@@ -413,11 +413,13 @@ h5 {
     display: table;
     height: 100vh;
     width: 100%;
+    margin: 0 auto;
 }
 
 .box-intro .table-cell {
     display: table-cell;
     vertical-align: middle;
+    margin: 0 auto;
 }
 
 .box-intro em {
@@ -569,6 +571,7 @@ b i:last-child {
 .box-headline {
     font-size: 130px;
     line-height: 1.0;
+    margin: 0 auto;
 }
 
 .box-words-wrapper {
@@ -577,15 +580,17 @@ b i:last-child {
 }
 
 .box-words-wrapper b {
-    display: inline-block;
-    position: absolute;
+    text-align: center;
+    display: block;
     white-space: nowrap;
-    left: 0;
-    top: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .box-words-wrapper b.is-visible {
-    position: relative;
+    position: absolute;
 }
 
 .no-js .box-words-wrapper b {
@@ -618,6 +623,10 @@ b i:last-child {
     -webkit-transform: translateZ(-20px) rotateX(90deg);
     transform: translateZ(-20px) rotateX(90deg);
     opacity: 0;
+}
+
+.slogan {
+    margin-top: 2%;
 }
 
 .is-visible .box-headline.rotate-2 i {
