@@ -942,15 +942,16 @@ footer img {
 ==================================================*/
 
 .profile-pic{
-	background-image: url('../img/me.jpg');
+	background-image: url('../img/me2.jpg');
 	background-position: center;
-	background-size: 100%;
+    background-size: cover;
 	width: 100%;
-	height:320px;
+	height:300px;
 }
 
 .profile-pic:hover {
-    background-image: url('../img/me1.png');
+    background-image: url('../img/me_color.jpg');
+    height:300px;
 }
 
 .top-bar {
