@@ -298,8 +298,9 @@ q {font-style: italic;}
   .modal-content {
     display: block;
     position: absolute;
-    width: 80%;
-    height: 85%;
+	width: 80%;
+	min-height: fit-content;
+	max-height: 85%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
