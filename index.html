@@ -87,7 +87,13 @@
 			
         </section>
     </div>
-	
+
+    <div id="modal01" class="modal" onclick="this.style.display='none'">
+        <span class="close">&times;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <div class="modal-content">
+            <img id="img01" style="max-width:100%">
+        </div>
+    </div>
 	
 	<!-- The overlay -->
 	<div id="myNav" class="container-fluid overlay">
@@ -97,12 +103,22 @@
 			<div class="project-title bg-grad-1"><h2>Projects<h2><a href="javascript:void(0)" class="closebtn" id="showDiv" onclick="closeNav()">&times;</a></div>
 			<div class="slideshow-container">
 				<!-- Full-width slides/quotes -->
-				<div class="overflow-auto container-fluid mySlides txt-grad">
-                    <div class="col-md-3 hidden-xs hidden-sm">
-                        <a href="img/investopia_view.JPG" target="_blank"><img src="img/investopia_view.JPG" class="img-thumbnail rounded float-left" alt="..."> <br><br></a>
-                        <a href="img/investopia_view_senti.JPG" target="_blank"><img src="img/investopia_view_senti.JPG" class="img-thumbnail rounded float-left" alt="..."> <br><br></a>
-                        <a href="img/investopia_view_tweets.JPG" target="_blank"><img src="img/investopia_view_tweets.JPG" class="img-thumbnail rounded float-left" alt="..."></a>
+				<div class="container-fluid mySlides txt-grad">
+                    <div class="col-md-3 hidden-xs hidden-sm">                   
+                        <div class="container1">
+                            <img src="img/investopia_view.JPG" style="max-width:100%;cursor:pointer"
+                            onclick="enlargeImg(this)" class="img-thumbnail rounded float-left">
+                        </div>
+                        <div class="container1">
+                            <img src="img/investopia_view_senti.JPG" style="max-width:100%;cursor:pointer" 
+                            onclick="enlargeImg(this)" class="img-thumbnail rounded float-left">
+                        </div>
+                        <div class="container1">
+                            <img src="img/investopia_view_tweets.JPG" style="max-width:100%;cursor:pointer" 
+                            onclick="enlargeImg(this)" class="img-thumbnail rounded float-left">
+                        </div>
                     </div>
+
                     <div class="col-md-8">
                        <h3 class="uppercase">InvestOpia</h3>
                        <h5>Python | Flask | MySQL | Yahoo Finance | scikit-learn | Tweepy | NLTK | News API</h5>
@@ -118,7 +134,7 @@
                                 <li>Yahoo Finance - Financial Data</li>
                                 <li>News API - Business/Market/Global Macro News</li>
                                 <li>Twitter - Tweets</li>
-                                <li>Reddit - Reddit psots, specially from the likes of WSB</li>
+                                <li>Reddit - Reddit posts, specially from the likes of WSB</li>
                                 <li>Google - Google Trends</li>
                             </ul>
                         
@@ -130,12 +146,16 @@
                             <button class="btn btn-1"><i class="fa fa-github"></i><a href="https://github.com/pmoe7/InvestOpia" target="_blank">&nbsp; Github</a></button>
                             <button class="btn btn-4"><i class="fa fa-home"></i><a href="https://mpirecap.ca" target="_blank">&nbsp; mPire Capital</a></button>
                         </div>
+                        
                     </div>
 			    </div>
 				
                 <div class="container-fluid mySlides txt-grad">
                     <div class="col-md-3 hidden-xs hidden-sm">
-                        <a href="img/ryzer.JPG" target="_blank"><img src="img/ryzer.JPG" class="img-thumbnail rounded float-left" alt="..."></a>
+                        <div class="container1">
+                            <img src="img/ryzer.JPG" style="max-width:100%;cursor:pointer" 
+                            onclick="enlargeImg(this)" class="img-thumbnail rounded float-left">
+                        </div>
                     </div>
                     <div class="col-md-8">
                        <h3 class="uppercase">Ryzer</h3>
@@ -152,7 +172,10 @@
                 
                 <div class="container-fluid mySlides txt-grad">
                     <div class="col-md-3 hidden-xs hidden-sm">
-                        <img src="img/me1.png" class="rounded float-left" alt="...">
+                        <div class="container1">
+                            <img src="img/pred.png" style="max-width:100%;cursor:pointer" 
+                            onclick="enlargeImg(this)" class="img-thumbnail rounded float-left">
+                        </div>
                     </div>
                     <div class="col-md-8">
                        <h3 class="uppercase">Stock Price Prediction</h3>
@@ -197,9 +220,6 @@ $('.click').click(function(e){
    // prevent default action
    e.preventDefault();
    
-   // get id of target div (placed in href attribute of anchor element)
-   // and pass it to the scrollToElement function
-    // also, use 2000 as an argument for the scroll speed (2 seconds, 2000 milliseconds)
    scrollToElement( $(this).attr('href'), 800 );
 });
 
@@ -211,7 +231,6 @@ var scrollToElement = function(el, ms){
 }
 
 var modal = document.getElementById("myNav");
-/* Open when someone clicks on the span element */
 function openNav() {
 	document.getElementById("titles").style.visibility="hidden";
     modal.style.height="100%";
@@ -219,7 +238,6 @@ function openNav() {
 	document.body.style.overflow = 'hidden';
 }
 
-/* Close when someone clicks on the "x" symbol inside the overlay */
 function closeNav() {
     modal.style.height = "0%";
 	document.getElementById("showDiv").style.visibility="hidden";
@@ -266,6 +284,13 @@ function showSlides(n) {
 setTimeout(function() {
     $('#tip').fadeOut('fast');
 }, 10000); // <-- time in milliseconds
+</script>
+
+<script>
+    function enlargeImg(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+}
 </script>
 </body>
 </html>
