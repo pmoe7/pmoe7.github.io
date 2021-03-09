@@ -54,6 +54,11 @@
  .section-title h1 {
      font-size: 56px;
  }
+ .section-title-long h1 {
+    font-size: 36px;
+}
+
+
  
  .home-two .section-title h1 {
      font-size: 50px;
