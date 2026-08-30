@@ -1,366 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-81413705-2"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-81413705-2');
-    </script>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>MP - Home</title>
-    <link rel="icon" href="img/fav.png" type="image/x-icon">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="ionicons/css/ionicons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="css/style.css" rel="stylesheet">
-	<link href="css/home.css" rel="stylesheet">
-    <script src="js/modernizr.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d090b">
+  <meta name="description" content="Mohammed Perves is an AI enthusiast, builder, and investor working across private equity, capital markets, and intelligent systems.">
+  <link rel="canonical" href="https://pmoe7.com/">
+  <meta property="og:type" content="website"><meta property="og:title" content="Mohammed Perves — AI Enthusiast &amp; Builder"><meta property="og:description" content="AI enthusiast, builder, and investor."><meta property="og:url" content="https://pmoe7.com/"><meta property="og:image" content="https://pmoe7.com/img/og-burgundy.jpg">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Mohammed Perves — AI Enthusiast &amp; Builder"><meta name="twitter:description" content="AI enthusiast, builder, and investor."><meta name="twitter:image" content="https://pmoe7.com/img/og-burgundy.jpg">
+  <title>Mohammed Perves — AI Enthusiast &amp; Builder</title>
+  <link rel="icon" type="image/png" href="img/MP_logo.png"><script>try{var t=localStorage.getItem('mp-theme');if(t!=='dark'&&t!=='light')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=t;document.querySelector('meta[name="theme-color"]').content=t==='dark'?'#0b0c0d':'#faf9f6';if(new URLSearchParams(location.search).get('intro')!=='1'&&sessionStorage.getItem('mp-intro-v2'))document.documentElement.classList.add('intro-seen')}catch(e){document.documentElement.dataset.theme='dark'}</script><link rel="stylesheet" href="css/a16z-site.css"><script src="https://unpkg.com/lucide@1.37.0/dist/umd/lucide.min.js" defer></script><script src="js/site.js" defer></script>
 </head>
-
-<body>
-    <div id="preloader">
-        <div class="pre-container">
-            <div class="spinner">
-                <div class="double-bounce1"></div>
-                <div class="double-bounce2"></div>
-            </div>
-        </div>
-    </div>
-	<center>
-        <div class="alert alert-info max_width" id="tip">
-            <strong>Info!</strong> Try clicking on the dots.
-        </div>
-    </center>
-    <div class="container-fluid">
-        <header class="box-header">
-            <a class="box-primary-nav-trigger" href="#menu">
-                <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
-            </a>
-        </header>
-        <nav>
-		<div class="particles" id="particles-js"></div>
-            <ul class="box-primary-nav">
-                <li class="box-label">Menu</li>
-                <li><a href="index.html">Intro</a> <i class="ion-ios-circle-filled color"></i></li>
-                <li><a href="about.html">About me</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact Me</a></li>
-                
-				<li class="box-label">Follow me</li>
-                <li class="box-social"><a href="#0"><i class="ion-social-facebook"></i></a></li>
-                <li class="box-social"><a href="#0"><i class="ion-social-twitter"></i></a></li>
-				<li class="box-social"><a href="https://www.linkedin.com/in/pmoe7/" target="_blank"><i class="ion-social-linkedin"></i></a></li>
-                <li class="box-social"><a href="https://github.com/pmoe7" target="_blank"><i class="ion-social-github"></i></a></li>
-
-                <li class="box-label"><a class="btn btn-1" href="resume.html" target="_blankk">Resume</a></li>
-            </ul>
-        </nav>
-        <section class="box-intro align-middle" id="titles">
-            <div class="table-cell">
-                <h1 class="box-headline letters rotate-2">
-                    <span class="box-words-wrapper">
-                        <b class="is-visible">Mohammed</b>
-                        <b>Perves</b>
-                        <b>Student</b>
-                        <b>Engineer</b>
-                        <b>Strategist</b>
-                        <b>Visionary</b>
-                        <b>Avid &nbsp; ML &nbsp; Enthusiast</b>
-                        <b>Sports &nbsp; ML &nbsp; Enthusiast</b>
-                        <b>A &nbsp; bit &nbsp; of &nbsp; an &nbsp; athlete</b>
-                        
-                    </span>
-		        </h1>
-                <h5 class="slogan">Veritas | Lux | Scientia</h5>
-            </div>
-
-            <div class="mouse fixed-bottom">
-				<a href="#projects" onclick="openNav()" class="btn btn-1 btn-primary btn-lg">Projects</a>
-			</div>
-			
-        </section>
-    </div>
-
-    <div id="modal01" class="modal" onclick="this.style.display='none'">
-        <span class="close">&times;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-        <div class="modal-content">
-            <img id="img01" style="max-width:100%">
-        </div>
-    </div>
-	
-	<!-- The overlay -->
-	<div id="myNav" class="container-fluid overlay">
-		<div class="container main-container clearfix"> 
-		<!-- Button to close the overlay navigation -->
-			<!-- Slideshow container -->
-			<div class="project-title bg-grad-1"><h2>Projects<h2><a href="javascript:void(0)" class="closebtn" id="showDiv" onclick="closeNav()">&times;</a></div>
-			<div class="slideshow-container">
-				<!-- Full-width slides/quotes -->
-				<div class="container-fluid mySlides txt-grad">
-                    <div class="col-md-3 hidden-xs hidden-sm">                   
-                        <div class="container1">
-                            <img src="img/investopia_view.JPG" style="max-width:100%;cursor:pointer"
-                            onclick="enlargeImg(this)" class="img-thumbnail rounded float-left">
-                        </div>
-                        <div class="container1">
-                            <img src="img/investopia_view_senti.JPG" style="max-width:100%;cursor:pointer" 
-                            onclick="enlargeImg(this)" class="img-thumbnail rounded float-left">
-                        </div>
-                        <div class="container1">
-                            <img src="img/investopia_view_tweets.JPG" style="max-width:100%;cursor:pointer" 
-                            onclick="enlargeImg(this)" class="img-thumbnail rounded float-left">
-                        </div>
-                    </div>
-
-                    <div class="col-md-8">
-                       <h3 class="uppercase">InvestOpia</h3>
-                       <h5>Python | Flask | MySQL | Yahoo Finance | scikit-learn | Tweepy | NLTK | News API</h5>
-                       <div class="h-30"></div>
-                        <p>
-                            InvestOpia is an in-house data and analytics platform, created to serve the internal users at MPire Capital.
-                        </p>
-                        <p>MPire Capital is a tiny quantitative hedge fund, that seeks to generate Alpha (excess risk adjusted - superior returns) by leveraging Analytics and Machine Learning (ML).</p>
-                        <p></p>
-            
-                        <p class="hidden-xs hidden-sm">InvestOpia collects and stores the following data:</p>
-                            <ul class="hidden-xs hidden-sm">
-                                <li>Yahoo Finance - Financial Data</li>
-                                <li>News API - Business/Market/Global Macro News</li>
-                                <li>Twitter - Tweets</li>
-                                <li>Reddit - Reddit posts, specially from the likes of WSB</li>
-                                <li>Google - Google Trends</li>
-                            </ul>
-                        
-                        <p>InvestOpia performs advanced analysis using the collected data such as sentiment and predictive analytics using:</p>
-                        <p class="hidden-md hidden-lg"><i>Tensorflow/Keras, PyTorch, scikit-learn and NLTK.</i></p>
-                        <img src="img/ml.jpg" class="img-ml hidden-xs hidden-sm">
-                        <a href="https://github.com/pmoe7/InvestOpia" target="_blank"><button class="btn btn-1"><i class="fa fa-github"></i>&nbsp; Github</button></a>
-                        <a href="https://mpirecap.ca" target="_blank"><button class="btn btn-4"><i class="fa fa-home"></i>&nbsp; mPire Capital</button></a>
-                        
-                        <div class="h-10"></div>
-                        
-                    </div>
-			    </div>
-
-                <!-- Full-width slides/quotes -->
-				<div class="container-fluid mySlides txt-grad">
-                    <div class="col-md-3 hidden-xs hidden-sm">                   
-                        <div class="container1">
-                            <img src="img/img_repo.PNG" style="max-width:100%;cursor:pointer"
-                            onclick="enlargeImg(this)" class="img-thumbnail rounded float-left">
-                        </div>
-                        <div class="container1">
-                            <img src="img/img_repo_upload.PNG" style="max-width:100%;cursor:pointer" 
-                            onclick="enlargeImg(this)" class="img-thumbnail rounded float-left">
-                        </div>
-                    </div>
-
-                    <div class="col-md-8">
-                       <h3 class="uppercase">Image Repo with content based search (object detection)</h3>
-                       <h5>Python | Flask | MySQL | TensorFlow | OpenCV | cvlib</h5>
-                       <div class="h-30"></div>
-                        <p>
-                            This is an image repo with the following features:
-                        </p>
-                        <p></p>
-                        <ul>
-                            <li>Content based search - you can search for images based on the objects or contents within the images</li>
-                            <li>Metadata search - you can search for images based on the metadata (such as tags, description) associated with the images</li>
-                            <li>Upload images - You can upload images to the repo</li>
-                            <li>More features under development</li>
-                        </ul>
-
-                        <p>The cvlib was used for object detection and all the data is stored on a MySQL DB.</p>
-                        
-                        <a href="https://github.com/pmoe7/Shopify-SWE-Image-Repo" target="_blank"><button class="btn btn-1"><i class="fa fa-github"></i>&nbsp; Github</button></a>
-                        <a href="http://pmoe7.pythonanywhere.com/" target="_blank"><button class="btn btn-4"><i class="fa fa-home"></i>&nbsp; Live Demo</button></a>
-                        
-                        <div class="h-10"></div>
-                        
-                    </div>
-			    </div>
-				
-                <div class="container-fluid mySlides txt-grad">
-                    <div class="col-md-3 hidden-xs hidden-sm">
-                        <div class="container1">
-                            <img src="img/ryzer.JPG" style="max-width:100%;cursor:pointer" 
-                            onclick="enlargeImg(this)" class="img-thumbnail rounded float-left">
-                        </div>
-                    </div>
-                    <div class="col-md-8">
-                       <h3 class="uppercase">Ryzer</h3>
-                       <h5>Python | Flask | MySQL | AWS DynamoDB | AWS Lambda</h5>
-                       <div class="h-30"></div>
-                        <p>Ryzer is a Web app that allows students to view and share resume templates, in hopes of bridging the network gap. Also, has a front-end for a resume parser API, to give users insights into how their resumes are parsed by an ATS.</p>
-        
-                        <p>Ryzer has served <b>1500+ unique</b> students, from all over the world, extending from the University of British Columbia to Dalhousie University, all the way to UC Berkeley and MIT as of <i>March 10, 2021</i></p>
-                        <a href="https://github.com/pmoe7/InvestOpia" target="_blank"><button class="btn btn-1"><i class="fa fa-github"></i>&nbsp; Github</button></a>
-                        <a href="https://ryzer.me" target="_blank"><button class="btn btn-4"><i class="fa fa-home"></i>&nbsp; Ryzer</button></a>
-                        <div class="h-10"></div>
-                    </div>
-                </div>
-
-                <div class="container-fluid mySlides txt-grad">
-                    <div class="col-md-3 hidden-xs hidden-sm">
-                        <!--<div class="container1">
-                            <img src="img/ryzer.JPG" style="max-width:100%;cursor:pointer" 
-                            onclick="enlargeImg(this)" class="img-thumbnail rounded float-left">
-                        </div>-->
-                    </div>
-                    <div class="col-md-8">
-                       <h3 class="uppercase">Azu: Quantitative Trading Strategies</h3>
-                       <h5>Python | Jupyter Notebook | scikit-learn | Keras | NLTK | </h5>
-                       <div class="h-30"></div>
-                        <b>Pairs Trading</b>
-                        <ul>
-                            <li>Used a word to vector algorithm to represent stocks (a combination of features) as vectors</li>
-                            <li>Used cointegration, cosine similarity and k-means clustering to find "pairs" and develop pairs trading strategy</li>
-                        </ul>
-
-                        <b>Momentum Trading</b>
-                        <ul>
-                            <li>Scraped social media sites like Reddit (Wallstreetbets) and Twitter to find optimal (hype) securities for momentum trading</li>
-                            <li>Performed sentiment analysis on the scraped data and combined with technical indicators to perform momentum trading</li>
-                        </ul>
-                        <b>Algho Trading</b>
-                        <ul>
-                            <li>Currently building and training reinforcement learning trading agents (bots), based off research and alghorithms from OpenAI.</li>
-                        </ul>
-                        <!--<button class="btn btn-1"><i class="fa fa-github"></i><a href="https://github.com/pmoe7/InvestOpia" target="_blank">&nbsp; Github</a></button>-->
-                        <button class="btn btn-4"><i class="fa fa-home"></i><a href="#coming-soon" target="_blank">&nbsp; Trading Strategies Live Performance</a></button>
-                        <div class="h-10"></div>
-                    </div>
-                </div>
-                
-                <div class="container-fluid mySlides txt-grad">
-                    <div class="col-md-3 hidden-xs hidden-sm">
-                        <div class="container1">
-                            <img src="img/pred.png" style="max-width:100%;cursor:pointer" 
-                            onclick="enlargeImg(this)" class="img-thumbnail rounded float-left">
-                        </div>
-                    </div>
-                    <div class="col-md-8">
-                       <h3 class="uppercase">Stock Price Prediction</h3>
-                       <h5>Python | scikit-learn | Tweepy | NLTK</h5>
-                       <div class="h-30"></div>
-                        <p>
-                            Machine learning application created in Python, leveraging scikit-learn and yahoo-finance API, that uses support vector regression to predict stock prices. Also, includes twitter sentiment analysis for improved accuracy.
-                        </p>
-            
-                        <a class="btn btn-3" href="https://github.com/pmuhamed1/Stock-Price-Prediction" target="_blank">Source</a>
-                        <div class="h-10"></div>
-                    </div>
-			    </div>
-
-				<!-- Next/prev buttons -->
-				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-				<a class="next" onclick="plusSlides(1)">&#10095;</a>
-			</div>
-
-			<!-- Dots/bullets/indicators -->
-			<div class="container-fluid dot-container bg-grad-1">
-				<span class="dot" onclick="currentSlide(1)"></span> 
-				<span class="dot" onclick="currentSlide(2)"></span> 
-				<span class="dot" onclick="currentSlide(3)"></span>
-                <span class="dot" onclick="currentSlide(4)"></span>
-                <span class="dot" onclick="currentSlide(5)"></span> 
-			</div>
-		</div>
-			
-	</div>
-			<!-- End Clearfix -->
-	
-    <script src="js/jquery-2.1.1.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/menu.js"></script>
-    <script src="js/animated-headline.js"></script>
-    <script src="js/isotope.pkgd.min.js"></script>
-    <script src="js/custom.js"></script>
-	<script src='js/particles.min.js'></script>
-    <script src="js/particles.js"></script>
-<script>
-$('.click').click(function(e){
-   // prevent default action
-   e.preventDefault();
-   
-   scrollToElement( $(this).attr('href'), 800 );
-});
-
-var scrollToElement = function(el, ms){
-    var speed = (ms) ? ms : 600;
-    $('html,body').animate({
-        scrollTop: $(el).offset().top
-    }, speed);
-}
-
-var modal = document.getElementById("myNav");
-function openNav() {
-	document.getElementById("titles").style.visibility="hidden";
-    modal.style.height="100%";
-	document.getElementById("showDiv").style.visibility="visible";
-	document.body.style.overflow = 'hidden';
-}
-
-function closeNav() {
-    modal.style.height = "0%";
-	document.getElementById("showDiv").style.visibility="hidden";
-	document.getElementById("titles").style.visibility="visible";
-	window.scrollTo(0, height); // values are x,y-offset
-}
-
-window.onclick = function(event) {
-    if (event.target == modal) {
-		modal.style.height = "0%";
-		document.getElementById("titles").style.visibility="visible";
-		document.getElementById("showDiv").style.visibility="hidden";
-		window.scrollTo(0, height); // values are x,y-offset
-    }
-}
-
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1} 
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none"; 
-    }
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-  slides[slideIndex-1].style.display = "block"; 
-  dots[slideIndex-1].className += " active";
-}
-
-setTimeout(function() {
-    $('#tip').fadeOut('fast');
-}, 10000); // <-- time in milliseconds
-</script>
-
-<script>
-    function enlargeImg(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-}
-</script>
+<body class="home-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="landing-intro" data-landing-intro aria-hidden="true"><div class="intro-composition"><span class="intro-line"></span><div class="intro-lockup"><span class="brand-seal intro-seal"><img src="img/MP_logo.png" alt="" width="1254" height="1254" decoding="async"></span><strong class="intro-name"><span>Mohammed</span><span>Perves</span></strong></div><span class="intro-label">AI • Technology • Investing</span></div></div>
+  <header class="site-header"><div class="topbar"><button class="icon-button" type="button" data-menu-open aria-controls="site-menu" aria-label="Open menu"><i data-lucide="menu" aria-hidden="true"></i></button><a class="wordmark" href="index.html" aria-label="Mohammed Perves, home"><span class="brand-name"><span>Mohammed</span><span>Perves</span></span></a><div class="topbar-actions"><button class="icon-button search-button" type="button" data-search-open aria-controls="site-search" aria-label="Open search"><i data-lucide="search" aria-hidden="true"></i></button></div></div></header>
+  <div class="menu-overlay" id="site-menu" data-menu aria-hidden="true"><button class="overlay-backdrop" type="button" data-menu-backdrop tabindex="-1" aria-label="Close menu"></button><aside class="menu-drawer" aria-label="Site menu"><button class="icon-button drawer-close" type="button" data-menu-close aria-label="Collapse menu"><i data-lucide="arrow-left" aria-hidden="true"></i></button><nav aria-label="Site navigation">
+    <section class="menu-panel root-panel" data-panel="root"><div class="menu-identity"><span class="brand-seal menu-brand-seal" aria-hidden="true"><img src="img/MP_logo.png" alt="" width="1254" height="1254" decoding="async"></span><span class="menu-person"><strong class="brand-name"><span>Mohammed</span><span>Perves</span></strong></span></div><ul class="menu-list"><li><a class="menu-link" href="index.html" aria-current="page"><i data-lucide="house" aria-hidden="true"></i><span>Home</span></a></li><li><a class="menu-link" href="about.html"><i data-lucide="user-round" aria-hidden="true"></i><span>About Me</span></a></li><li><a class="menu-link" href="writing.html"><i data-lucide="notebook-pen" aria-hidden="true"></i><span>Writing</span></a></li></ul><div class="menu-footer"><button class="icon-button theme-button menu-theme-button" type="button" data-theme-toggle aria-label="Switch color theme"><i data-lucide="sun" data-theme-icon aria-hidden="true"></i></button><div class="menu-socials" aria-label="Social profiles"><a class="social-circle" href="https://x.com/pmoe_1" target="_blank" rel="noreferrer" aria-label="X"><span class="brand-social-icon brand-x" aria-hidden="true"></span></a><a class="social-circle" href="https://www.linkedin.com/in/pmoe7/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><svg class="lucide lucide-linkedin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a><a class="social-circle" href="https://substack.com/@pmoe7" target="_blank" rel="noreferrer" aria-label="Substack"><span class="brand-social-icon brand-substack" aria-hidden="true"></span></a></div></div></section>
+  </nav></aside></div>
+  <div class="search-overlay" id="site-search" data-search aria-hidden="true"><button class="overlay-backdrop" type="button" data-search-backdrop tabindex="-1" aria-label="Close search"></button><div class="search-box" role="search"><div class="search-input-wrap"><label class="sr-only" for="site-search-input">Search the site</label><input id="site-search-input" type="search" placeholder="Search articles, ideas, and more…" autocomplete="off" data-search-input><button class="icon-button search-close" type="button" data-search-close aria-label="Close search"><i data-lucide="x" aria-hidden="true"></i></button></div><div class="search-results" data-search-results aria-live="polite"></div></div></div>
+  <main class="home-main" id="main">
+    <section class="home-hero" aria-labelledby="hero-title">
+      <div class="hero-atmosphere" aria-hidden="true"><span class="light-band light-band-one"></span><span class="light-band light-band-two"></span><span class="light-band light-band-three"></span></div>
+      <div class="idea-galaxy" aria-hidden="true">
+        <span class="galaxy-field"></span>
+        <span class="galaxy-axis galaxy-axis-one"></span><span class="galaxy-axis galaxy-axis-two"></span>
+        <span class="galaxy-core"><i></i></span><span class="galaxy-caption">Ideas in motion</span>
+        <span class="galaxy-orbit galaxy-orbit-one"><span class="idea-token">Intelligence</span></span>
+        <span class="galaxy-orbit galaxy-orbit-two"><span class="idea-token">Product</span></span>
+        <span class="galaxy-orbit galaxy-orbit-three"><span class="idea-token">Strategy</span></span>
+        <span class="idea-spark idea-spark-one"></span><span class="idea-spark idea-spark-two"></span><span class="idea-spark idea-spark-three"></span><span class="idea-spark idea-spark-four"></span><span class="idea-spark idea-spark-five"></span>
+      </div>
+      <div class="hero-content container"><h1 class="hero-title hero-title-image" id="hero-title"><span class="hero-name-wordmark" aria-hidden="true"></span><span class="sr-only">Mohammed Perves</span></h1><div class="hero-support"><p class="hero-positioning">AI enthusiast <span aria-hidden="true">·</span> Builder <span aria-hidden="true">·</span> Investor</p><a class="hero-link" href="about.html">Learn about me <i class="long-arrow" data-lucide="arrow-right" aria-hidden="true"></i></a></div></div>
+      <span class="hero-signal" aria-hidden="true"><i data-lucide="audio-lines"></i></span>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="footer-inner container"><div class="footer-brand"><a class="brand-lockup" href="index.html" aria-label="Mohammed Perves, home"><span class="brand-seal" aria-hidden="true"><img src="img/MP_logo.png" alt="" width="1254" height="1254" decoding="async"></span><span class="brand-name"><span>Mohammed</span><span>Perves</span></span></a><p class="footer-tagline">AI enthusiast · Builder · Investor.</p></div><div class="footer-right"><div class="footer-socials" aria-label="Footer controls"><button class="icon-button theme-button footer-theme-button" type="button" data-theme-toggle aria-label="Switch color theme"><i data-lucide="sun" data-theme-icon aria-hidden="true"></i></button><a class="social-circle" href="https://x.com/pmoe_1" target="_blank" rel="noreferrer" aria-label="X"><span class="brand-social-icon brand-x" aria-hidden="true"></span></a><a class="social-circle" href="https://www.linkedin.com/in/pmoe7/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><svg class="lucide lucide-linkedin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a><a class="social-circle" href="https://substack.com/@pmoe7" target="_blank" rel="noreferrer" aria-label="Substack"><span class="brand-social-icon brand-substack" aria-hidden="true"></span></a></div><span>© 2026 Mohammed Perves</span><span>New York</span><a href="mailto:pmuhamed10@gmail.com">Contact</a></div></div></footer>
 </body>
 </html>
