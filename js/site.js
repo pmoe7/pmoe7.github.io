@@ -18,7 +18,9 @@
   const filterItems = document.querySelectorAll('[data-category]');
   const landingIntro = document.querySelector('[data-landing-intro]');
   const themeToggles = document.querySelectorAll('[data-theme-toggle]');
-  const themeMedia = window.matchMedia('(prefers-color-scheme: dark)');
+  const themeMedia = typeof window.matchMedia === 'function'
+    ? window.matchMedia('(prefers-color-scheme: dark)')
+    : null;
   const aboutOpening = document.querySelector('[data-about-opening]');
   const aboutOpeningSkip = document.querySelector('[data-about-opening-skip]');
   const aboutRevealItems = document.querySelectorAll('.about-reveal');
@@ -28,6 +30,24 @@
 
   function getTheme() {
     return document.documentElement.dataset.theme === 'light' ? 'light' : 'dark';
+  }
+
+  function getSystemTheme() {
+    return themeMedia && themeMedia.matches ? 'dark' : 'light';
+  }
+
+  function getThemePreference() {
+    const currentPreference = document.documentElement.dataset.themePreference;
+    if (currentPreference === 'auto' || currentPreference === 'light' || currentPreference === 'dark') {
+      return currentPreference;
+    }
+
+    try {
+      const storedPreference = localStorage.getItem('mp-theme');
+      if (storedPreference === 'light' || storedPreference === 'dark') return storedPreference;
+    } catch (error) { /* Storage is optional. */ }
+
+    return 'auto';
   }
 
   function renderLucideIcons() {
@@ -53,13 +73,47 @@
   }
 
   function applyTheme(theme, remember) {
-    document.documentElement.dataset.theme = theme;
+    const resolvedTheme = theme === 'dark' || theme === 'light' ? theme : getSystemTheme();
+    document.documentElement.dataset.theme = resolvedTheme;
+    document.documentElement.style.colorScheme = resolvedTheme;
     const themeColor = document.querySelector('meta[name="theme-color"]');
-    if (themeColor) themeColor.setAttribute('content', theme === 'dark' ? '#0b0c0d' : '#faf9f6');
+    if (themeColor) themeColor.setAttribute('content', resolvedTheme === 'dark' ? '#0b0c0d' : '#faf9f6');
     if (remember) {
-      try { localStorage.setItem('mp-theme', theme); } catch (error) { /* Storage is optional. */ }
+      document.documentElement.dataset.themePreference = resolvedTheme;
+      document.documentElement.dataset.themeSystem = getSystemTheme();
+      try {
+        localStorage.setItem('mp-theme-system', getSystemTheme());
+        localStorage.setItem('mp-theme', resolvedTheme);
+      } catch (error) { /* Storage is optional. */ }
     }
     syncThemeControl();
+  }
+
+  function clearStoredThemePreference() {
+    try {
+      localStorage.removeItem('mp-theme');
+      localStorage.removeItem('mp-theme-system');
+    } catch (error) { /* Storage is optional. */ }
+  }
+
+  function useSystemTheme(theme) {
+    const systemTheme = theme || getSystemTheme();
+    clearStoredThemePreference();
+    document.documentElement.dataset.themePreference = 'auto';
+    document.documentElement.dataset.themeSystem = systemTheme;
+    applyTheme(systemTheme, false);
+  }
+
+  function syncThemeAfterResume() {
+    const systemTheme = getSystemTheme();
+    if (getThemePreference() === 'auto') {
+      applyTheme(systemTheme, false);
+      return;
+    }
+
+    if (document.documentElement.dataset.themeSystem !== systemTheme) {
+      useSystemTheme(systemTheme);
+    }
   }
 
   if (landingIntro) {
@@ -67,7 +121,8 @@
   }
 
   if (aboutOpening) {
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const reduceMotion = typeof window.matchMedia === 'function'
+      && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     let openingFinished = false;
     let openingTimer = null;
     const preventOpeningScroll = (event) => { if (event.cancelable) event.preventDefault(); };
@@ -164,7 +219,9 @@
 
   if (menuOpen) menuOpen.setAttribute('aria-expanded', 'false');
   if (searchOpen) searchOpen.setAttribute('aria-expanded', 'false');
-  syncThemeControl();
+  const initialThemePreference = getThemePreference();
+  document.documentElement.dataset.themePreference = initialThemePreference;
+  applyTheme(initialThemePreference === 'auto' ? getSystemTheme() : initialThemePreference, false);
 
   themeToggles.forEach((themeToggle) => {
     themeToggle.addEventListener('click', () => {
@@ -172,10 +229,35 @@
     });
   });
 
-  themeMedia.addEventListener && themeMedia.addEventListener('change', (event) => {
-    try {
-      if (!localStorage.getItem('mp-theme')) applyTheme(event.matches ? 'dark' : 'light', false);
-    } catch (error) { /* Keep the current theme if storage is unavailable. */ }
+  const handleSystemThemeChange = (event) => {
+    useSystemTheme(event.matches ? 'dark' : 'light');
+  };
+
+  if (themeMedia) {
+    if (typeof themeMedia.addEventListener === 'function') {
+      themeMedia.addEventListener('change', handleSystemThemeChange);
+    } else if (typeof themeMedia.addListener === 'function') {
+      themeMedia.addListener(handleSystemThemeChange);
+    }
+  }
+
+  window.addEventListener('storage', (event) => {
+    if (event.key !== 'mp-theme') return;
+    const preference = event.newValue === 'dark' || event.newValue === 'light' ? event.newValue : 'auto';
+    let preferenceSystem = null;
+    try { preferenceSystem = localStorage.getItem('mp-theme-system'); } catch (error) { /* Storage is optional. */ }
+    if (preference === 'auto' || preferenceSystem !== getSystemTheme()) {
+      useSystemTheme();
+      return;
+    }
+    document.documentElement.dataset.themePreference = preference;
+    document.documentElement.dataset.themeSystem = preferenceSystem;
+    applyTheme(preference, false);
+  });
+
+  window.addEventListener('pageshow', syncThemeAfterResume);
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden) syncThemeAfterResume();
   });
 
   const searchItems = [
@@ -195,6 +277,7 @@
   function openMenu() {
     if (!menu) return;
     lastFocus = document.activeElement;
+    document.documentElement.classList.add('menu-open');
     menu.classList.add('is-open');
     menu.setAttribute('aria-hidden', 'false');
     menuOpen && menuOpen.setAttribute('aria-expanded', 'true');
@@ -203,6 +286,7 @@
 
   function closeMenu() {
     if (!menu) return;
+    document.documentElement.classList.remove('menu-open');
     menu.classList.remove('is-open');
     menu.setAttribute('aria-hidden', 'true');
     menuOpen && menuOpen.setAttribute('aria-expanded', 'false');
@@ -297,6 +381,20 @@
   });
 
   document.addEventListener('keydown', (event) => {
+    if (event.key === 'Tab' && menu && menu.classList.contains('is-open') && menuDrawer) {
+      const focusable = Array.from(menuDrawer.querySelectorAll('a[href], button:not([disabled])'))
+        .filter((item) => item.getClientRects().length);
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (first && last && event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (first && last && !event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    }
+
     if (event.key === 'Escape') {
       if (menu && menu.classList.contains('is-open')) closeMenu();
       if (search && search.classList.contains('is-open')) closeSearch();
