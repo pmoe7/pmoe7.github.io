@@ -1,239 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-81413705-2"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-81413705-2');
-    </script>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>PM - Optimal Distribution of Covid-19 Vaccines</title>
-    <link rel="icon" href="img/fav.png" type="image/x-icon">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="ionicons/css/ionicons.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/slide.css" rel="stylesheet">
-    <link href="css/typography.css" rel="stylesheet">
-    <script src="js/modernizr.js"></script>
-
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><meta name="theme-color" content="#faf9f6">
+  <meta name="description" content="A machine-learning framework for prioritizing people and distributing COVID-19 vaccines equitably across Ontario public-health units.">
+  <link rel="canonical" href="https://pmoe7.com/covid.html"><meta property="og:type" content="article"><meta property="og:title" content="Equitable Vaccine Distribution — Mohammed Perves"><meta property="og:description" content="A two-level machine-learning framework for transparent and equitable vaccine allocation."><meta property="og:url" content="https://pmoe7.com/covid.html"><meta property="og:image" content="https://pmoe7.com/img/covid-ml.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Equitable Vaccine Distribution — Mohammed Perves"><meta name="twitter:description" content="A two-level machine-learning framework for transparent and equitable vaccine allocation."><meta name="twitter:image" content="https://pmoe7.com/img/covid-ml.png">
+  <title>Equitable Vaccine Distribution — Mohammed Perves</title><link rel="icon" type="image/png" href="img/MP_logo.png"><script>(function(){var d=typeof window.matchMedia==='function'&&window.matchMedia('(prefers-color-scheme: dark)').matches;var y=d?'dark':'light',p=null,s=null;try{p=localStorage.getItem('mp-theme');s=localStorage.getItem('mp-theme-system')}catch(e){}var v=(p==='dark'||p==='light')&&s===y;if(!v){p=null;try{localStorage.removeItem('mp-theme');localStorage.removeItem('mp-theme-system')}catch(e){}}var t=p||y,r=document.documentElement;r.dataset.theme=t;r.dataset.themePreference=v?p:'auto';r.dataset.themeSystem=y;r.style.colorScheme=t;var m=document.querySelector('meta[name="theme-color"]');if(m)m.content=t==='dark'?'#0b0c0d':'#faf9f6'}())</script><link rel="stylesheet" href="css/a16z-site.css"><link rel="stylesheet" href="css/typography.css"><script src="https://unpkg.com/lucide@1.37.0/dist/umd/lucide.min.js" defer></script><script src="js/site.js" defer></script>
 </head>
+<body class="interior-page case-page covid-case-page" data-header-tone="dark">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="topbar"><button class="icon-button" type="button" data-menu-open aria-controls="site-menu" aria-label="Open menu"><i data-lucide="menu" aria-hidden="true"></i></button><div class="topbar-actions"><button class="icon-button search-button" type="button" data-search-open aria-controls="site-search" aria-label="Open search"><i data-lucide="search" aria-hidden="true"></i></button></div></div></header>
+  <div class="menu-overlay" id="site-menu" data-menu aria-hidden="true"><button class="overlay-backdrop" type="button" data-menu-backdrop tabindex="-1" aria-label="Close menu"></button><aside class="menu-drawer" aria-label="Site menu"><button class="icon-button drawer-close" type="button" data-menu-close aria-label="Close menu"><i data-lucide="x" aria-hidden="true"></i></button><nav aria-label="Site navigation">
+    <section class="menu-panel root-panel" data-panel="root"><div class="menu-identity"><span class="brand-seal menu-brand-seal" aria-hidden="true"><img src="img/MP_logo.png" alt="" width="1254" height="1254" decoding="async"></span><span class="menu-person"><strong class="brand-name"><span>Mohammed</span><span>Perves</span></strong></span></div><ul class="menu-list"><li><a class="menu-link" href="index.html"><i data-lucide="house" aria-hidden="true"></i><span>Home</span></a></li><li><a class="menu-link" href="about.html"><i data-lucide="user-round" aria-hidden="true"></i><span>About Me</span></a></li><li><a class="menu-link" href="projects.html" aria-current="page"><i data-lucide="blocks" aria-hidden="true"></i><span>Projects</span></a></li><li><a class="menu-link" href="writing.html"><i data-lucide="notebook-pen" aria-hidden="true"></i><span>Writing</span></a></li></ul><div class="menu-footer"><button class="icon-button theme-button menu-theme-button" type="button" data-theme-toggle aria-label="Switch color theme"><i data-lucide="sun" data-theme-icon aria-hidden="true"></i></button><div class="menu-socials" aria-label="Social profiles"><a class="social-circle" href="https://x.com/pmoe_1" target="_blank" rel="noreferrer" aria-label="X"><span class="brand-social-icon brand-x" aria-hidden="true"></span></a><a class="social-circle" href="https://www.linkedin.com/in/pmoe7/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><svg class="lucide lucide-linkedin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a><a class="social-circle" href="https://substack.com/@pmoe7" target="_blank" rel="noreferrer" aria-label="Substack"><span class="brand-social-icon brand-substack" aria-hidden="true"></span></a></div></div></section>
+  </nav></aside></div>
+  <div class="search-overlay" id="site-search" data-search aria-hidden="true"><button class="overlay-backdrop" type="button" data-search-backdrop tabindex="-1" aria-label="Close search"></button><div class="search-box" role="search"><div class="search-input-wrap"><label class="sr-only" for="site-search-input">Search the site</label><i class="search-field-icon" data-lucide="search" aria-hidden="true"></i><input id="site-search-input" type="search" placeholder="Search projects, articles, and ideas…" autocomplete="off" data-search-input><button class="icon-button search-close" type="button" data-search-close aria-label="Close search"><i data-lucide="x" aria-hidden="true"></i></button></div><div class="search-results" data-search-results aria-live="polite"></div></div></div>
 
-<body>
+  <main class="case-main" id="main">
+    <section class="case-hero case-theme-section" data-header-tone="dark" aria-labelledby="case-title">
+      <div class="case-hero-inner container">
+        <a class="case-back" href="projects.html"><i data-lucide="arrow-left" aria-hidden="true"></i> All projects</a>
+        <div class="case-hero-grid"><div><p class="page-kicker">Machine learning · Public health</p><h1 id="case-title">Equitable vaccine<br><em>distribution.</em></h1></div><div class="case-hero-summary"><p>A two-level framework for deciding who should receive a scarce vaccine first—and how supply should move across public-health regions.</p><dl><div><dt>Context</dt><dd>COVID-19 vaccine rollout</dd></div><div><dt>Scope</dt><dd>Individuals + Ontario PHUs</dd></div><div><dt>Methods</dt><dd>Clustering + classification</dd></div></dl></div></div>
+        <div class="case-hero-art" aria-hidden="true"><span class="case-orbit case-orbit-one"></span><span class="case-orbit case-orbit-two"></span><span class="case-node case-node-one"></span><span class="case-node case-node-two"></span><span class="case-node case-node-three"></span></div>
+      </div>
+    </section>
 
-    <!-- Preloader -->
-    <div id="preloader">
-        <div class="pre-container">
-            <div class="spinner">
-                <div class="double-bounce1"></div>
-                <div class="double-bounce2"></div>
-            </div>
-        </div>
-    </div>
-    <!-- end Preloader -->
+    <section class="case-overview case-theme-section" data-header-tone="light" aria-labelledby="overview-title"><div class="container case-overview-grid"><p class="page-kicker">The challenge</p><div><h2 id="overview-title">Scarcity turns allocation into a question of judgment.</h2><p class="case-lede">A fair rollout has to balance health risk, exposure, population characteristics, and geography—without hiding consequential decisions inside an opaque model.</p><p>The project proposed a transparent decision-support system with two connected layers. The first assigns an individual Provincial Priority Level. The second clusters public-health units so supply can be distributed using comparable regional characteristics. Expert review remains part of both layers.</p></div></div></section>
 
-    <div class="container-fluid">
-        <!-- box-header -->
-        <header class="box-header">
-            <a class="box-primary-nav-trigger" href="#0">
-                <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
-            </a>
-        </header>
-        <!-- end box-header -->
-        <nav>
-            <ul class="box-primary-nav">
-                <li class="box-label">Menu</li>
-                <li><a href="index.html">Intro</a></li>
-                <li><a href="about.html">About me</a></li>
-                <li><a href="blog.html">Blog</a><i class="ion-ios-circle-filled color"></i></li>
-                <li><a href="contact.html">Contact Me</a></li>
-                
-				<li class="box-label">Follow me</li>
-                <li class="box-social"><a href="#0"><i class="ion-social-facebook"></i></a></li>
-                <li class="box-social"><a href="#0"><i class="ion-social-twitter"></i></a></li>
-                <li class="box-social"><a href="https://www.linkedin.com/in/pmoe7/" target="_blank"><i class="ion-social-linkedin"></i></a></li>
-                <li class="box-social"><a href="https://github.com/pmoe7" target="_blank"><i class="ion-social-github"></i></a></li>
+    <section class="case-model case-theme-section" data-header-tone="dark" aria-labelledby="model-title"><div class="container"><div class="case-section-head"><p class="page-kicker">The model</p><h2 id="model-title">One framework.<br>Two levels of allocation.</h2></div><div class="case-model-grid">
+      <article class="case-model-card"><span class="case-model-number">01</span><p class="case-model-label">Individual level</p><h3>Who goes first?</h3><p>People with health data are grouped into ten clusters using unsupervised learning. Each cluster receives a Provincial Priority Level from 1 (highest) to 10 (lowest), based on age, underlying health conditions, income, and exposure-related factors.</p><ul><li>Demographics and income</li><li>Health conditions and clinical indicators</li><li>Exposure, density, and essential work</li></ul></article>
+      <article class="case-model-card"><span class="case-model-number">02</span><p class="case-model-label">Public-health-unit level</p><h3>Where does supply go?</h3><p>Ontario public-health units are clustered using census and COVID-era indicators. Allocation can then reflect the population and risk profile of each region instead of political boundaries alone.</p><ul><li>Population age and household composition</li><li>Active cases, resolved cases, and deaths</li><li>Occupation, income, housing, and health services</li></ul></article>
+    </div></div></section>
 
-                <li class="box-label"><a class="btn btn-1" href="resume.html" target="_blankk">Resume</a></li>
-            </ul>
-        </nav>
-    </div>
-    <!-- top-bar -->
-    <div class="top-bar">
-        <h1>Optimal Distribution of Covid-19 Vaccines</h1>
-        <p><a href="#">Home</a> / <a href="blog.html">Blog</a> / Optimal Distribution of Covid-19 Vaccines</p>
-    </div>
-    <!-- end top-bar -->
-    
-    <!-- main-container -->
-    <div class="container main-container">
-        <div class="col-md-12">
-            <h3 class="text-uppercase">Optimal Distribution of Covid-19 Vaccines</h3>
-            <h5>Leveraging ML for for the optimal Distribution of Covid-19 vaccines in an equitable manner.</h5>
-            <div class="h-30"></div>
-        </div>
+    <section class="case-flow case-theme-section" data-header-tone="light" aria-labelledby="flow-title"><div class="container"><div class="case-section-head"><p class="page-kicker">Decision flow</p><h2 id="flow-title">From data to an appointment queue.</h2></div><ol class="case-flow-list"><li><span>01</span><div><h3>Assess</h3><p>Use available demographic, clinical, and exposure data to group people with similar profiles.</p></div></li><li><span>02</span><div><h3>Assign</h3><p>Translate cluster characteristics into a transparent priority level, with expert oversight.</p></div></li><li><span>03</span><div><h3>Predict</h3><p>For people without existing health data, use a registration questionnaire and a supervised classifier to estimate the same priority level.</p></div></li><li><span>04</span><div><h3>Schedule</h3><p>Place registrants into a location-specific queue and offer the next appointment to the highest-priority person.</p></div></li></ol></div></section>
 
-        <div class="col-md-9">
-            <h4>Introduction</h4>
-            <p>
-                Brief intro...
-            </p>
+    <section class="case-evidence case-theme-section" data-header-tone="light" aria-labelledby="evidence-title"><div class="container"><div class="case-section-head"><p class="page-kicker">Model evidence</p><h2 id="evidence-title">The working analysis.</h2></div><div class="case-evidence-grid"><figure><img src="img/covid_ml/3.PNG" alt="Individual-level vaccine prioritization model using unsupervised and supervised learning" width="1280" height="720" loading="lazy"><figcaption>Individual-level feature design and classifier comparison.</figcaption></figure><figure><img src="img/covid_ml/4.PNG" alt="Ten population clusters with assigned Provincial Priority Levels" width="1280" height="720" loading="lazy"><figcaption>Ten clusters translated into an explicit vaccination order.</figcaption></figure><figure><img src="img/covid_ml/7.PNG" alt="Public-health-unit clustering model for vaccine distribution" width="1280" height="720" loading="lazy"><figcaption>Regional allocation using census and public-health indicators.</figcaption></figure><figure><img src="img/covid_ml/6.PNG" alt="Appointment queue example ordered by Provincial Priority Level" width="1280" height="720" loading="lazy"><figcaption>A location-level appointment queue ordered by priority.</figcaption></figure></div></div></section>
 
-			<h4>The Problem</h4>
-            <p>
-                The problem...
-            </p>
-			<h4>Our Solution</h4>
-            <p>
-                Solution...
-            </p>
-            
-        </div>
+    <section class="case-ethics case-theme-section" data-header-tone="dark" aria-labelledby="ethics-title"><div class="container case-ethics-grid"><div><p class="page-kicker">AI ethics</p><h2 id="ethics-title">Fairness is part of the architecture.</h2></div><div><p>The framework treats transparency, confidentiality, security, and bias mitigation as product requirements—not a postscript.</p><ul><li><strong>Keep decisions legible.</strong> Document how priority levels are produced and avoid an unexplained black box.</li><li><strong>Protect patient data.</strong> Secure collection, transformation, and storage, with clear consent and intended-use boundaries.</li><li><strong>Audit inputs and outcomes.</strong> Use representative training data and inspect how sensitive variables could encode bias.</li><li><strong>Preserve human review.</strong> Let an expert panel examine clusters and individual characteristics before priority levels become policy.</li></ul></div></div></section>
 
-        <div class="col-md-3">
-            <ul class="cat-ul">
-                <li><i class="ion-ios-circle-filled"></i> Law</li>
-                <li><i class="ion-ios-circle-filled"></i> Justice</li>
-                <li><i class="ion-ios-circle-filled"></i> Society</li>
-                <li><i class="ion-ios-circle-filled"></i> Principles & Morals</li>
-            </ul>
-            <div class="h-10"></div>
-            <h4>Date</h4> April 3, 2017
-            <h4>Share</h4>
-            <ul class="social-ul">
-                <li class="box-social"><a href="#0"><i class="ion-social-facebook"></i></a></li>
-                <li class="box-social"><a href="#0"><i class="ion-social-instagram-outline"></i></a></li>
-                <li class="box-social"><a href="#0"><i class="ion-social-twitter"></i></a></li>
-                <li class="box-social"><a href="#0"><i class="ion-social-linkedin"></i></a></li>
-            </ul>
-        </div>
-    </div>
-    <!-- end main-container -->
-    <div class="slide-container">
-        <div class="carousel">
-            <input type="radio" name="slides" checked="checked" id="slide-1">
-            <input type="radio" name="slides" id="slide-2">
-            <input type="radio" name="slides" id="slide-3">
-            <input type="radio" name="slides" id="slide-4">
-            <input type="radio" name="slides" id="slide-5">
-            <input type="radio" name="slides" id="slide-6">
-            <input type="radio" name="slides" id="slide-7">
-            <input type="radio" name="slides" id="slide-8">
-            <ul class="carousel__slides">
-                <li class="carousel__slide">
-                    <figure>
-                        <div>
-                            <img src="img/covid_ml/1.PNG" alt="">
-                        </div>
-                    </figure>
-                </li>
-                <li class="carousel__slide">
-                    <figure>
-                        <div>
-                            <img src="img/covid_ml/2.PNG" alt="">
-                        </div>
-                    </figure>
-                </li>
-                <li class="carousel__slide">
-                    <figure>
-                        <div>
-                            <img src="img/covid_ml/3.PNG" alt="">
-                        </div>
-                    </figure>
-                </li>
-                <li class="carousel__slide">
-                    <figure>
-                        <div>
-                            <img src="img/covid_ml/4.PNG" alt="">
-                        </div>
+    <section class="case-gallery case-theme-section" data-header-tone="light" aria-labelledby="gallery-title"><div class="container"><div class="case-section-head"><p class="page-kicker">Original deck</p><h2 id="gallery-title">Explore the full concept.</h2></div><div class="case-gallery-track" tabindex="0" aria-label="Project slides; scroll horizontally to view more"><figure><img src="img/covid_ml/1.PNG" alt="Assess, Inject, and Immunize strategy overview" width="1280" height="720" loading="lazy"><figcaption>01 / Strategy</figcaption></figure><figure><img src="img/covid_ml/3.PNG" alt="Individual-level vaccine prioritization model" width="1280" height="720" loading="lazy"><figcaption>02 / Individual model</figcaption></figure><figure><img src="img/covid_ml/4.PNG" alt="Population cluster characteristics" width="1280" height="720" loading="lazy"><figcaption>03 / Cluster analysis</figcaption></figure><figure><img src="img/covid_ml/5.PNG" alt="Expert panel cluster review interface" width="1280" height="720" loading="lazy"><figcaption>04 / Expert review</figcaption></figure><figure><img src="img/covid_ml/6.PNG" alt="Appointment queue example" width="1280" height="720" loading="lazy"><figcaption>05 / Scheduling</figcaption></figure><figure><img src="img/covid_ml/7.PNG" alt="Public-health-unit distribution model" width="1280" height="720" loading="lazy"><figcaption>06 / Regional model</figcaption></figure><figure><img src="img/covid_ml/8.PNG" alt="AI ethics risks and mitigations" width="1280" height="720" loading="lazy"><figcaption>07 / Ethics</figcaption></figure></div></div></section>
 
-                    </figure>
-                </li>
-                <li class="carousel__slide">
-                    <figure>
-                        <div>
-                            <img src="img/covid_ml/5.PNG" alt="">
-                        </div>
-                    </figure>
-                </li>
-                <li class="carousel__slide">
-                    <figure>
-                        <div>
-                            <img src="img/covid_ml/6.PNG" alt="">
-                        </div>
-                    </figure>
-                </li>
-                <li class="carousel__slide">
-                    <figure>
-                        <div>
-                            <img src="img/covid_ml/7.PNG" alt="">
-                        </div>
-                    </figure>
-                </li>
-                <li class="carousel__slide">
-                    <figure>
-                        <div>
-                            <img src="img/covid_ml/8.PNG" alt="">
-                        </div>
-                    </figure>
-                </li>
-            </ul>    
-            <ul class="carousel__thumbnails">
-                <li>
-                    <label for="slide-1"><img src="img/covid_ml/1.PNG" alt=""></label>
-                </li>
-                <li>
-                    <label for="slide-2"><img src="img/covid_ml/2.PNG" alt=""></label>
-                </li>
-                <li>
-                    <label for="slide-3"><img src="img/covid_ml/3.PNG" alt=""></label>
-                </li>
-                <li>
-                    <label for="slide-4"><img src="img/covid_ml/4.PNG" alt=""></label>
-                </li>
-                <li>
-                    <label for="slide-5"><img src="img/covid_ml/5.PNG" alt=""></label>
-                </li>
-                <li>
-                    <label for="slide-6"><img src="img/covid_ml/6.PNG" alt=""></label>
-                </li>
-                <li>
-                    <label for="slide-7"><img src="img/covid_ml/7.PNG" alt=""></label>
-                </li>
-                <li>
-                    <label for="slide-8"><img src="img/covid_ml/8.PNG" alt=""></label>
-                </li>
-            </ul>
-        </div>
-    </div>        
+    <nav class="case-next case-theme-section" data-header-tone="dark" aria-label="Project navigation"><div class="container"><span class="page-kicker">Back to the archive</span><a href="projects.html"><span>See all projects</span><i data-lucide="arrow-right" aria-hidden="true"></i></a></div></nav>
+  </main>
 
-    
-    <!-- back to top -->
-    <a href="#0" class="cd-top"><i class="ion-android-arrow-up"></i></a>
-    <!-- end back to top -->
-
-    <!-- jQuery -->
-    <script src="js/jquery-2.1.1.js"></script>
-    <!--  plugins -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/menu.js"></script>
-    <script src="js/animated-headline.js"></script>
-    <script src="js/isotope.pkgd.min.js"></script>
-
-
-    <!--  custom script -->
-    <script src="js/custom.js"></script>
-
+  <footer class="site-footer"><div class="footer-inner container"><div class="footer-brand"><a class="brand-lockup" href="index.html" aria-label="Mohammed Perves, home"><span class="brand-seal" aria-hidden="true"><img src="img/MP_logo.png" alt="" width="1254" height="1254" decoding="async"></span><span class="brand-name"><span>Mohammed</span><span>Perves</span></span></a><p class="footer-tagline">AI enthusiast · Builder · Investor.</p></div><div class="footer-right"><div class="footer-socials" aria-label="Footer controls"><button class="icon-button theme-button footer-theme-button" type="button" data-theme-toggle aria-label="Switch color theme"><i data-lucide="sun" data-theme-icon aria-hidden="true"></i></button><a class="social-circle" href="https://x.com/pmoe_1" target="_blank" rel="noreferrer" aria-label="X"><span class="brand-social-icon brand-x" aria-hidden="true"></span></a><a class="social-circle" href="https://www.linkedin.com/in/pmoe7/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><svg class="lucide lucide-linkedin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a><a class="social-circle" href="https://substack.com/@pmoe7" target="_blank" rel="noreferrer" aria-label="Substack"><span class="brand-social-icon brand-substack" aria-hidden="true"></span></a></div><span>© 2026 Mohammed Perves</span><span>New York</span><a href="mailto:pmuhamed10@gmail.com">Contact</a></div></div></footer>
 </body>
-
 </html>
