@@ -1349,10 +1349,10 @@ html[data-theme="dark"] .project-card-graphic { background: linear-gradient(135d
 /* Portrait silhouette — an image-sampled field of animated line particles. */
 .profile-silhouette {
   position: absolute;
-  top: 4%;
-  right: 1%;
+  top: 2%;
+  right: 2%;
   z-index: 2;
-  width: min(47vw, 690px);
+  width: min(52vw, 82svh, 980px);
   aspect-ratio: 1;
   pointer-events: none;
   opacity: 1;
