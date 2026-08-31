@@ -1383,15 +1383,26 @@ html[data-theme="dark"] .project-card-graphic { background: linear-gradient(135d
 
 .profile-silhouette-art {
   position: absolute;
-  inset: 0;
+  inset: -2.667%;
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 105.334%;
+  height: 105.334%;
+  max-width: none;
   object-fit: contain;
+  overflow: visible;
 }
 
 html[data-theme="dark"] .profile-silhouette-art {
-  filter: brightness(0) invert(1) opacity(.84) drop-shadow(0 0 18px rgba(213, 219, 226, .12));
+  filter: brightness(0) invert(.72) sepia(.08) saturate(.65) opacity(.82) drop-shadow(0 0 14px rgba(213, 219, 226, .09));
+}
+
+html[data-theme="dark"] .profile-silhouette::before {
+  background: radial-gradient(circle at 50% 42%, rgba(150, 164, 180, .09), transparent 58%);
+  opacity: .34;
+}
+
+html[data-theme="dark"] .profile-silhouette-halo {
+  background: radial-gradient(circle, rgba(213, 219, 226, .055) 0, rgba(184, 155, 94, .045) 35%, transparent 70%);
 }
 
 @keyframes profile-silhouette-reveal {
@@ -3675,11 +3686,6 @@ html.menu-open { overflow: hidden; }
     transition: transform 170ms ease, color 170ms ease, border-color 170ms ease, box-shadow 170ms ease;
   }
 
-  .menu-list li:first-child .menu-link,
-  .menu-list li:first-child .submenu-trigger {
-    border-top-color: #2d2e32;
-  }
-
   .menu-link > .lucide,
   .submenu-trigger > .lucide {
     display: block;
@@ -3852,6 +3858,8 @@ html.menu-open { overflow: hidden; }
     translate: -50% 0;
     opacity: .64;
   }
+
+  html[data-theme="dark"] .profile-silhouette { opacity: .78; }
 
   .home-page .hero-content {
     width: 100%;

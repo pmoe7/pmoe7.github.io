@@ -1,5 +1,6 @@
-<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300' role='img' aria-label='Dot portrait of Mohammed Perves'>
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='-8 -8 316 316' overflow='visible' role='img' aria-label='Dot portrait of Mohammed Perves'>
 <style>
+svg{overflow:visible}
 circle{fill:#183d66}
 .ambient{transform-box:fill-box;transform-origin:center;animation:ambient-a 2.6s cubic-bezier(.45,0,.55,1) infinite alternate}
 .ambient:nth-child(3n){animation-name:ambient-b;animation-duration:3.4s;animation-delay:-1.7s}
@@ -8,7 +9,6 @@ circle{fill:#183d66}
 @keyframes ambient-a{from{transform:translate(-1px,.8px) scale(.6);opacity:.38}to{transform:translate(1.3px,-1px) scale(1.35);opacity:1}}
 @keyframes ambient-b{from{transform:translate(1.2px,1px) scale(.72);opacity:.48}to{transform:translate(-1.5px,-.7px) scale(1.48);opacity:.92}}
 @keyframes ambient-c{from{transform:translate(-.7px,-1.4px) scale(.55);opacity:.32}to{transform:translate(1px,1.2px) scale(1.25);opacity:.96}}
-@media(prefers-color-scheme:dark){circle{fill:#d5dbe2}}
 @media(prefers-reduced-motion:reduce){.ambient{animation:none}}
 </style>
 <g class='dot-layer l0'>
