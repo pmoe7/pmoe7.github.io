@@ -4050,6 +4050,12 @@ html.menu-open { overflow: hidden; }
 }
 
 @media (max-width: 760px) {
+  .home-page .search-input-wrap,
+  .home-page .search-results {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+
   .profile-silhouette {
     position: relative;
     top: auto;

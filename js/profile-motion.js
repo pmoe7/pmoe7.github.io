@@ -40,6 +40,7 @@
   let frameTimer = 0;
   let resizeRequest = 0;
   let visible = true;
+  let searchOpen = document.documentElement.classList.contains('search-open');
   let contextLost = false;
 
   function compileShader(type, source) {
@@ -158,7 +159,7 @@
 
   function tick(timestamp) {
     frameRequest = 0;
-    if (!visible || document.hidden || reducedMotion.matches || contextLost) return;
+    if (!visible || searchOpen || document.hidden || reducedMotion.matches || contextLost) return;
     draw(timestamp);
     scheduleFrame();
   }
@@ -179,9 +180,9 @@
     if (frameTimer) window.clearTimeout(frameTimer);
     frameRequest = 0;
     frameTimer = 0;
-    if (visible && !document.hidden && !reducedMotion.matches && !contextLost) {
+    if (visible && !searchOpen && !document.hidden && !reducedMotion.matches && !contextLost) {
       scheduleFrame();
-    } else {
+    } else if (!searchOpen) {
       draw(performance.now());
     }
   }
@@ -229,6 +230,10 @@
     }
   });
   themeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+  document.addEventListener('site-search-toggle', function (event) {
+    searchOpen = Boolean(event.detail && event.detail.open);
+    syncPlayback();
+  });
   document.addEventListener('visibilitychange', syncPlayback, { passive: true });
   if (typeof reducedMotion.addEventListener === 'function') reducedMotion.addEventListener('change', syncPlayback);
   else if (typeof reducedMotion.addListener === 'function') reducedMotion.addListener(syncPlayback);

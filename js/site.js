@@ -389,17 +389,21 @@
   function openSearch() {
     if (!search) return;
     lastFocus = document.activeElement;
+    document.documentElement.classList.add('search-open');
     search.classList.add('is-open');
     search.setAttribute('aria-hidden', 'false');
     searchOpen && searchOpen.setAttribute('aria-expanded', 'true');
+    document.dispatchEvent(new CustomEvent('site-search-toggle', { detail: { open: true } }));
     window.setTimeout(() => searchInput && searchInput.focus(), 80);
   }
 
   function closeSearch() {
     if (!search) return;
+    document.documentElement.classList.remove('search-open');
     search.classList.remove('is-open');
     search.setAttribute('aria-hidden', 'true');
     searchOpen && searchOpen.setAttribute('aria-expanded', 'false');
+    document.dispatchEvent(new CustomEvent('site-search-toggle', { detail: { open: false } }));
     if (searchInput) searchInput.value = '';
     if (searchResults) { searchResults.innerHTML = ''; searchResults.classList.remove('has-results'); }
     if (lastFocus) lastFocus.focus();
