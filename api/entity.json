@@ -1,0 +1,39 @@
+{
+  "$schema": "https://schema.org",
+  "@context": "https://schema.org",
+  "@id": "https://pmoe7.com/#person",
+  "@type": "Person",
+  "name": "Mohammed Perves",
+  "url": "https://pmoe7.com/",
+  "image": "https://pmoe7.com/img/me_sf_2.jpg",
+  "description": "Builder, strategist, and investor working across intelligent systems, enterprise technology, and capital.",
+  "jobTitle": "AI and Platforms Lead",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Aker",
+    "url": "https://aker-ai.com/"
+  },
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Wilfrid Laurier University",
+    "url": "https://www.wlu.ca/"
+  },
+  "knowsAbout": [
+    "Artificial intelligence",
+    "Agentic systems",
+    "Enterprise software",
+    "Data products",
+    "Product strategy",
+    "Private equity",
+    "Capital markets",
+    "Machine learning"
+  ],
+  "sameAs": [
+    "https://www.linkedin.com/in/pmoe7/",
+    "https://github.com/pmoe7",
+    "https://substack.com/@pmoe7",
+    "https://x.com/pmoe_1",
+    "https://arxiv.org/search/q-fin?query=Perves%2C+M&searchtype=author"
+  ],
+  "mainEntityOfPage": "https://pmoe7.com/about.html"
+}

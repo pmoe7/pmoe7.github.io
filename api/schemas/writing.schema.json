@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pmoe7.com/api/schemas/writing.schema.json",
+  "title": "Mohammed Perves writing index",
+  "type": "object",
+  "required": ["name", "url", "author", "items"],
+  "properties": {
+    "name": { "type": "string" },
+    "url": { "type": "string", "format": "uri" },
+    "feed": { "type": "string", "format": "uri" },
+    "author": { "type": "object", "required": ["name", "url"] },
+    "lastUpdated": { "type": "string", "format": "date" },
+    "items": { "type": "array", "items": { "type": "object", "required": ["title", "type", "datePublished", "description", "url"] } }
+  }
+}

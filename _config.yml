@@ -1,1 +1,24 @@
+title: Mohammed Perves
+description: Builder, strategist, and investor working across intelligent systems, enterprise technology, and capital.
+url: https://pmoe7.com
+baseurl: ""
+lang: en-US
+timezone: America/New_York
+encoding: utf-8
 theme: jekyll-theme-cayman
+
+# These source artifacts are intentionally retained in the repository but are
+# not part of the public website. Their useful content has crawlable HTML
+# equivalents elsewhere on the site.
+exclude:
+  - Hackathon.html
+  - contact.html
+  - fontawesome-free-5.15.1-web.zip
+  - Mohammed Perves Resume - Technical - v2.pdf
+  - pairs.html
+  - resume.html
+  - scripts
+  - README.md
+
+include:
+  - .well-known

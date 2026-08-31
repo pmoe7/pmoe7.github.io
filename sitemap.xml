@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://pmoe7.com/</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://pmoe7.com/about.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://pmoe7.com/img/me_sf_2.jpg</image:loc>
+      <image:caption>Portrait of Mohammed Perves</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://pmoe7.com/projects.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://pmoe7.com/img/investopia_view.JPG</image:loc>
+      <image:caption>InvestOpia market-intelligence dashboard</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://pmoe7.com/img/img_repo.PNG</image:loc>
+      <image:caption>Content-aware image repository interface</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://pmoe7.com/covid.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pmoe7.com/img/covid-ml.png</image:loc>
+      <image:caption>Machine-learning framework for equitable vaccine distribution</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://pmoe7.com/writing.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pmoe7.com/law.html</loc>
+    <lastmod>2017-04-03</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.3</priority>
+    <image:image>
+      <image:loc>https://pmoe7.com/img/justice.jpg</image:loc>
+      <image:caption>Law and justice essay illustration</image:caption>
+    </image:image>
+  </url>
+</urlset>

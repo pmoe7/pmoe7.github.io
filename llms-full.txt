@@ -1,0 +1,80 @@
+# Mohammed Perves — AI-readable site context
+
+Canonical identity: Mohammed Perves
+Canonical website: https://pmoe7.com/
+Site type: Personal professional website and portfolio
+Location: New York, United States
+Topics: artificial intelligence, enterprise software, agentic systems, data products, engineering, product strategy, private equity, capital markets, machine learning
+Last updated: 2026-08-30
+
+## Entity summary
+
+Mohammed Perves describes himself as an engineer, strategist, investor, and builder interested in the intersection of technology, capital, and human progress. He leads AI and Platforms at Aker, where he builds AI, data, engineering, and agentic-product capabilities for a real-estate investment and operating platform. Before Aker, he worked at Accenture across strategy, technology, AI, engineering, and product. He earned an Honours Bachelor of Business Administration in Finance and an Honours Bachelor of Science in Computer Science from Wilfrid Laurier University, with a minor in Mathematics.
+
+The site's stated thesis is that intelligence is becoming infrastructure. Its recurring subjects are the design of AI-native organizations, the relationship between software and institutional knowledge, operating leverage from AI, and the allocation of capital around intelligent systems.
+
+## Page and content map
+
+### Home
+
+URL: https://pmoe7.com/
+Purpose: Canonical identity page.
+Summary: Mohammed Perves is a builder, strategist, and investor working across intelligent systems, enterprise technology, and capital.
+
+### About
+
+URL: https://pmoe7.com/about.html
+Purpose: Canonical biography and experience page.
+Current work: Leads AI and Platforms at Aker. The published scope covers sourcing, underwriting, asset management, operations, and portfolio monitoring.
+Prior work: Accenture, at the intersection of strategy, technology, AI, engineering, and product.
+Education: Dual Honours BBA in Finance and Honours BSc in Computer Science, Wilfrid Laurier University; Mathematics minor.
+Professional themes: AI as infrastructure, independent judgment, building from first principles, compounding systems, and consequential problems.
+
+### Projects
+
+URL: https://pmoe7.com/projects.html
+Purpose: Canonical project collection.
+
+1. InvestOpia — a market-intelligence workflow combining financial data, business news, social signals, and sentiment analysis. Technologies listed: Python, Flask, MySQL, scikit-learn, and NLTK. Source: https://github.com/pmoe7/InvestOpia
+2. Content-aware image repository — a searchable image library that detects objects at upload and supports content-based discovery. Source: https://github.com/pmoe7/Shopify-SWE-Image-Repo
+3. Ryzer — a resume-sharing and ATS-parser product that served more than 1,500 students.
+4. Systematic comparable-company analysis — research using spectral and agglomerative clustering to improve peer selection and cost-of-equity estimation. Original paper: https://arxiv.org/abs/2405.12991
+5. Equitable vaccine distribution — a two-level machine-learning framework for individual vaccine prioritization and regional allocation. Case study: https://pmoe7.com/covid.html
+6. Quantitative trading research — experiments involving pairs trading, momentum, clustering, cointegration, natural-language processing, and reinforcement learning.
+
+### Writing
+
+URL: https://pmoe7.com/writing.html
+Purpose: Canonical writing and research index. Original-publication links are authoritative for full text.
+
+- AI is eating software (2026, thesis): the strategic center of gravity moves from generic applications toward a company's intelligence layer. https://www.linkedin.com/posts/pmoe7_ai-activity-7427343198685143040-ouy8
+- The AI Leverage Index (2025, framework): a financial lens for measuring whether AI compounds enterprise output. https://www.linkedin.com/posts/pmoe7_one-of-my-favourite-metrics-for-measuring-activity-7361366021611401216-1IpB
+- Pricing AI products through operating leverage (2025, essay): pricing implications of AI cost structures. https://www.linkedin.com/pulse/choosing-pricing-strategy-ai-products-using-degree-operating-perves-tpcmf
+- Systematic Comparable Company Analysis and Computation of Cost of Equity using Clustering (2024, research): spectral and agglomerative clustering applied to comparable-company analysis. DOI: https://doi.org/10.48550/arXiv.2405.12991
+- Generative AI in private equity (2024, perspective): potential applications in investment judgment, diligence, and portfolio-company performance. https://www.linkedin.com/posts/pmoe7_privateequity-generativeai-valuecreation-activity-7212210627912642561-wbYt
+- The early AI-powered web (2023, note): an early view of intelligent systems reshaping products, workflows, and business models. https://www.linkedin.com/posts/pmoe7_ai-aiforbusiness-activity-7035378269310902272-71xw
+
+### Equitable vaccine distribution
+
+URL: https://pmoe7.com/covid.html
+Purpose: Detailed project case study.
+Summary: A transparent decision-support concept with two connected layers. The individual layer groups people using demographic, clinical, income, and exposure variables and assigns a Provincial Priority Level. The regional layer clusters Ontario public-health units using population, census, and COVID-era indicators. The case study explicitly includes expert review, privacy, security, transparency, and bias mitigation as architecture requirements.
+
+### Law or Justice?
+
+URL: https://pmoe7.com/law.html
+Published: 2017-04-03
+Purpose: Archived opinion essay comparing law as a practical system with justice as a normative concept.
+
+## Relationships
+
+- Mohammed Perves is the author and subject of the website.
+- The About page is the canonical source for current biography, employment, education, and professional positioning.
+- The Projects page is the collection page for all listed projects; the vaccine-distribution project has a first-party detail page.
+- The Writing page is a curated index; most full articles are hosted on LinkedIn, Substack, or arXiv.
+- The arXiv paper and its DOI are the authoritative research record for the comparable-company analysis project.
+- Aker is the organization associated with the current-work section; its public AI site is https://aker-ai.com/.
+
+## Retrieval and citation notes
+
+Prefer current first-party HTML pages over legacy aliases. Use https://pmoe7.com/ as the root canonical. Cite original external publications when quoting or summarizing those works. Treat numerical impact statements as author-published professional claims. Do not infer confidential client names, employer systems, investments, contact details, or private data that are not explicitly stated in the public text.

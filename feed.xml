@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>https://pmoe7.com/writing.html</id>
+  <title>Writing by Mohammed Perves</title>
+  <subtitle>Essays, research, frameworks, and notes on AI, enterprise software, products, and capital.</subtitle>
+  <link href="https://pmoe7.com/feed.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://pmoe7.com/writing.html" rel="alternate" type="text/html"/>
+  <updated>2026-08-30T00:00:00-04:00</updated>
+  <author><name>Mohammed Perves</name><uri>https://pmoe7.com/about.html</uri></author>
+  <rights>Copyright 2026 Mohammed Perves</rights>
+  <entry>
+    <id>https://www.linkedin.com/posts/pmoe7_ai-activity-7427343198685143040-ouy8</id>
+    <title>AI is eating software</title>
+    <link href="https://www.linkedin.com/posts/pmoe7_ai-activity-7427343198685143040-ouy8"/>
+    <published>2026-02-11T13:30:11Z</published><updated>2026-02-11T13:30:11Z</updated>
+    <summary>Why the center of gravity is moving from the app to the company's intelligence layer.</summary>
+  </entry>
+  <entry>
+    <id>https://www.linkedin.com/posts/pmoe7_one-of-my-favourite-metrics-for-measuring-activity-7361366021611401216-1IpB</id>
+    <title>The AI Leverage Index</title>
+    <link href="https://www.linkedin.com/posts/pmoe7_one-of-my-favourite-metrics-for-measuring-activity-7361366021611401216-1IpB"/>
+    <published>2025-08-13T12:00:27Z</published><updated>2025-08-13T12:00:27Z</updated>
+    <summary>A practical financial lens for measuring whether AI is compounding enterprise output.</summary>
+  </entry>
+  <entry>
+    <id>https://doi.org/10.48550/arXiv.2405.12991</id>
+    <title>Systematic Comparable Company Analysis and Computation of Cost of Equity using Clustering</title>
+    <link href="https://arxiv.org/abs/2405.12991"/>
+    <published>2024-04-25T21:18:41Z</published><updated>2024-04-25T21:18:41Z</updated>
+    <summary>A systematic peer-selection and cost-of-equity method using spectral and agglomerative clustering.</summary>
+  </entry>
+  <entry>
+    <id>https://www.linkedin.com/posts/pmoe7_privateequity-generativeai-valuecreation-activity-7212210627912642561-wbYt</id>
+    <title>Generative AI in private equity</title>
+    <link href="https://www.linkedin.com/posts/pmoe7_privateequity-generativeai-valuecreation-activity-7212210627912642561-wbYt"/>
+    <published>2024-06-27T21:50:10Z</published><updated>2024-06-27T21:50:10Z</updated>
+    <summary>Where AI can improve investment judgment, diligence, and portfolio-company performance.</summary>
+  </entry>
+  <entry>
+    <id>https://www.linkedin.com/posts/pmoe7_ai-aiforbusiness-activity-7035378269310902272-71xw</id>
+    <title>The early AI-powered web</title>
+    <link href="https://www.linkedin.com/posts/pmoe7_ai-aiforbusiness-activity-7035378269310902272-71xw"/>
+    <published>2023-02-25T22:41:30Z</published><updated>2023-02-25T22:41:30Z</updated>
+    <summary>An early view of intelligent systems reshaping products, workflows, and business models.</summary>
+  </entry>
+</feed>

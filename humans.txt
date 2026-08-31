@@ -1,0 +1,12 @@
+/* TEAM */
+Owner, author, and builder: Mohammed Perves
+Website: https://pmoe7.com/
+Location: New York, United States
+
+/* SITE */
+Language: English
+Standards: HTML5, CSS, JavaScript, JSON-LD, Schema.org, Atom
+Canonical discovery: /sitemap.xml
+AI-readable context: /llms.txt and /llms-full.txt
+Structured data: /api/entity.json, /api/projects.json, /api/writing.json
+Last update: 2026-08-30

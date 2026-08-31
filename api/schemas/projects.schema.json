@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pmoe7.com/api/schemas/projects.schema.json",
+  "title": "Mohammed Perves project index",
+  "type": "object",
+  "required": ["name", "url", "author", "projects"],
+  "properties": {
+    "name": { "type": "string" },
+    "url": { "type": "string", "format": "uri" },
+    "author": { "type": "object", "required": ["name", "url"] },
+    "lastUpdated": { "type": "string", "format": "date" },
+    "projects": { "type": "array", "items": { "type": "object", "required": ["id", "name", "description"] } }
+  }
+}

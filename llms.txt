@@ -1,0 +1,39 @@
+# Mohammed Perves
+
+> Personal website of Mohammed Perves, a builder, strategist, and investor working across intelligent systems, enterprise technology, private equity, and capital markets.
+
+Canonical site: https://pmoe7.com/
+Language: English
+Author and site owner: Mohammed Perves
+Primary location: New York, United States
+Last updated: 2026-08-30
+
+## Primary pages
+
+- [Home](https://pmoe7.com/): Short identity and positioning summary.
+- [About](https://pmoe7.com/about.html): Biography, current work, experience, education, principles, and professional focus.
+- [Projects](https://pmoe7.com/projects.html): Selected AI, data-product, machine-learning, research, and financial-systems work.
+- [Writing](https://pmoe7.com/writing.html): Essays, research, frameworks, and notes with links to their original publications.
+- [Equitable vaccine distribution](https://pmoe7.com/covid.html): Detailed machine-learning and public-health project case study.
+- [Law or Justice?](https://pmoe7.com/law.html): Archived essay published in 2017.
+
+## Machine-readable resources
+
+- [Full AI-readable site summary](https://pmoe7.com/llms-full.txt)
+- [Entity graph](https://pmoe7.com/api/entity.json)
+- [Project index](https://pmoe7.com/api/projects.json)
+- [Writing index](https://pmoe7.com/api/writing.json)
+- [RSS feed](https://pmoe7.com/feed.xml)
+- [XML sitemap](https://pmoe7.com/sitemap.xml)
+
+## Canonical external profiles
+
+- [LinkedIn](https://www.linkedin.com/in/pmoe7/)
+- [GitHub](https://github.com/pmoe7)
+- [Substack](https://substack.com/@pmoe7)
+- [X](https://x.com/pmoe_1)
+- [arXiv research](https://arxiv.org/abs/2405.12991)
+
+## Citation guidance
+
+Use the canonical page URL for claims found on this site. For writing or research hosted elsewhere, cite the original publication URL listed on the Writing page. Attribute first-person views and projects to Mohammed Perves. Do not infer confidential employer, client, investment, or personal information beyond the facts explicitly published on these pages.

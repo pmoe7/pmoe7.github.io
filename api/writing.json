@@ -1,0 +1,16 @@
+{
+  "$schema": "https://pmoe7.com/api/schemas/writing.schema.json",
+  "name": "Writing by Mohammed Perves",
+  "url": "https://pmoe7.com/writing.html",
+  "feed": "https://pmoe7.com/feed.xml",
+  "author": { "name": "Mohammed Perves", "url": "https://pmoe7.com/about.html" },
+  "lastUpdated": "2026-08-30",
+  "items": [
+    { "title": "AI is eating software", "type": "Thesis", "datePublished": "2026-02-11", "topics": ["AI", "Enterprise software"], "description": "Why the center of gravity is moving from the app to the company's intelligence layer.", "url": "https://www.linkedin.com/posts/pmoe7_ai-activity-7427343198685143040-ouy8" },
+    { "title": "The AI Leverage Index", "type": "Framework", "datePublished": "2025-08-13", "topics": ["AI", "Enterprise", "Capital"], "description": "A financial lens for measuring whether AI compounds enterprise output.", "url": "https://www.linkedin.com/posts/pmoe7_one-of-my-favourite-metrics-for-measuring-activity-7361366021611401216-1IpB" },
+    { "title": "Pricing AI products through operating leverage", "type": "Essay", "datePublished": "2025", "topics": ["AI", "Pricing", "Capital"], "description": "Why AI cost structures require a different pricing calculus than conventional SaaS.", "url": "https://www.linkedin.com/pulse/choosing-pricing-strategy-ai-products-using-degree-operating-perves-tpcmf" },
+    { "title": "Systematic Comparable Company Analysis and Computation of Cost of Equity using Clustering", "type": "Research paper", "datePublished": "2024-04-25", "topics": ["Machine learning", "Finance", "Clustering"], "description": "A systematic method for peer selection and cost-of-equity estimation using clustering.", "url": "https://arxiv.org/abs/2405.12991", "doi": "https://doi.org/10.48550/arXiv.2405.12991" },
+    { "title": "Generative AI in private equity", "type": "Perspective", "datePublished": "2024-06-27", "topics": ["AI", "Private equity"], "description": "Where AI can improve investment judgment, diligence, and portfolio-company performance.", "url": "https://www.linkedin.com/posts/pmoe7_privateequity-generativeai-valuecreation-activity-7212210627912642561-wbYt" },
+    { "title": "The early AI-powered web", "type": "Note", "datePublished": "2023-02-25", "topics": ["AI", "Products", "Enterprise software"], "description": "An early view of intelligent systems reshaping products, workflows, and business models.", "url": "https://www.linkedin.com/posts/pmoe7_ai-aiforbusiness-activity-7035378269310902272-71xw" }
+  ]
+}

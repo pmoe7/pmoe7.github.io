@@ -2,55 +2,11 @@
 <style>
 svg{overflow:visible}
 circle{fill:#183d66}
-.ambient{transform-box:fill-box;transform-origin:center;animation:ambient-a 2.6s cubic-bezier(.45,0,.55,1) infinite alternate}
-.ambient:nth-child(3n){animation-name:ambient-b;animation-duration:3.4s;animation-delay:-1.7s}
-.ambient:nth-child(3n+1){animation-name:ambient-c;animation-duration:4.1s;animation-delay:-2.5s}
-.ambient:nth-child(5n){animation-duration:2.1s;animation-delay:-.9s}
-@keyframes ambient-a{from{transform:translate(-1px,.8px) scale(.6);opacity:.38}to{transform:translate(1.3px,-1px) scale(1.35);opacity:1}}
-@keyframes ambient-b{from{transform:translate(1.2px,1px) scale(.72);opacity:.48}to{transform:translate(-1.5px,-.7px) scale(1.48);opacity:.92}}
-@keyframes ambient-c{from{transform:translate(-.7px,-1.4px) scale(.55);opacity:.32}to{transform:translate(1px,1.2px) scale(1.25);opacity:.96}}
-@media(prefers-reduced-motion:reduce){.ambient{animation:none}}
 </style>
 <g class='dot-layer l0'>
-<circle class='ambient' cx='158.69' cy='-0.98' r='1.28' opacity='0.48'/>
-<circle class='ambient' cx='168.47' cy='-1.15' r='1.20' opacity='0.48'/>
-<circle class='ambient' cx='183.66' cy='-1.00' r='1.30' opacity='0.48'/>
-<circle class='ambient' cx='118.72' cy='4.04' r='1.24' opacity='0.47'/>
-<circle class='ambient' cx='123.76' cy='4.07' r='1.25' opacity='0.47'/>
-<circle class='ambient' cx='143.47' cy='3.86' r='1.18' opacity='0.47'/>
-<circle class='ambient' cx='163.69' cy='4.01' r='1.26' opacity='0.47'/>
-<circle class='ambient' cx='168.92' cy='4.19' r='1.37' opacity='0.48'/>
-<circle class='ambient' cx='173.90' cy='4.18' r='1.37' opacity='0.48'/>
-<circle class='ambient' cx='193.68' cy='4.01' r='1.32' opacity='0.48'/>
-<circle class='ambient' cx='198.85' cy='4.14' r='1.38' opacity='0.48'/>
-<circle class='ambient' cx='163.89' cy='9.16' r='1.34' opacity='0.47'/>
-<circle class='ambient' cx='173.82' cy='9.11' r='1.32' opacity='0.48'/>
-<circle class='ambient' cx='178.85' cy='9.14' r='1.34' opacity='0.48'/>
-<circle class='ambient' cx='138.73' cy='14.05' r='1.24' opacity='0.47'/>
-<circle class='ambient' cx='143.82' cy='14.11' r='1.28' opacity='0.47'/>
-<circle class='ambient' cx='163.59' cy='13.94' r='1.22' opacity='0.47'/>
-<circle class='ambient' cx='168.48' cy='13.86' r='1.18' opacity='0.47'/>
-<circle class='ambient' cx='173.58' cy='13.93' r='1.22' opacity='0.47'/>
-<circle class='ambient' cx='178.60' cy='13.95' r='1.24' opacity='0.48'/>
-<circle class='ambient' cx='193.74' cy='14.05' r='1.31' opacity='0.48'/>
-<circle class='ambient' cx='218.85' cy='14.14' r='1.39' opacity='0.48'/>
-<circle class='ambient' cx='143.89' cy='19.17' r='1.30' opacity='0.47'/>
-<circle class='ambient' cx='173.55' cy='18.91' r='1.21' opacity='0.47'/>
-<circle class='ambient' cx='208.90' cy='19.18' r='1.39' opacity='0.48'/>
-<circle class='ambient' cx='138.91' cy='24.18' r='1.32' opacity='0.47'/>
-<circle class='ambient' cx='183.85' cy='24.14' r='1.32' opacity='0.47'/>
-<circle class='ambient' cx='188.64' cy='23.98' r='1.24' opacity='0.47'/>
-<circle class='ambient' cx='208.80' cy='24.10' r='1.33' opacity='0.48'/>
-<circle class='ambient' cx='138.77' cy='29.08' r='1.93' opacity='0.59'/>
-<circle class='ambient' cx='153.64' cy='28.98' r='1.39' opacity='0.50'/>
-<circle class='ambient' cx='208.83' cy='29.12' r='1.35' opacity='0.48'/>
 <circle cx='118.75' cy='34.06' r='2.87' opacity='0.76'/>
 <circle cx='133.76' cy='34.07' r='3.35' opacity='0.84'/>
-<circle class='ambient' cx='218.92' cy='34.19' r='1.40' opacity='0.48'/>
 <circle cx='128.65' cy='43.99' r='3.95' opacity='0.96'/>
-<circle class='ambient' cx='208.84' cy='44.13' r='1.32' opacity='0.47'/>
-<circle class='ambient' cx='228.45' cy='43.84' r='1.20' opacity='0.48'/>
-<circle class='ambient' cx='243.53' cy='43.90' r='1.27' opacity='0.49'/>
 <circle cx='108.48' cy='48.86' r='3.88' opacity='0.96'/>
 <circle cx='113.71' cy='49.03' r='3.97' opacity='0.96'/>
 <circle cx='118.51' cy='48.88' r='3.89' opacity='0.96'/>
@@ -58,8 +14,6 @@ circle{fill:#183d66}
 <circle cx='153.46' cy='48.85' r='3.87' opacity='0.96'/>
 <circle cx='163.55' cy='48.91' r='3.91' opacity='0.96'/>
 <circle cx='173.93' cy='49.20' r='3.97' opacity='0.94'/>
-<circle class='ambient' cx='218.70' cy='49.03' r='1.28' opacity='0.48'/>
-<circle class='ambient' cx='248.70' cy='49.03' r='1.33' opacity='0.49'/>
 <circle cx='103.87' cy='54.15' r='4.03' opacity='0.96'/>
 <circle cx='108.93' cy='54.20' r='4.06' opacity='0.96'/>
 <circle cx='123.50' cy='53.88' r='3.89' opacity='0.96'/>
@@ -67,26 +21,20 @@ circle{fill:#183d66}
 <circle cx='168.48' cy='53.86' r='3.88' opacity='0.96'/>
 <circle cx='178.74' cy='54.06' r='3.90' opacity='0.94'/>
 <circle cx='198.66' cy='53.99' r='3.95' opacity='0.96'/>
-<circle class='ambient' cx='208.54' cy='53.90' r='1.30' opacity='0.49'/>
-<circle class='ambient' cx='213.84' cy='54.13' r='1.32' opacity='0.47'/>
 <circle cx='88.62' cy='58.96' r='3.59' opacity='0.90'/>
 <circle cx='93.92' cy='59.19' r='4.01' opacity='0.95'/>
-<circle class='ambient' cx='223.84' cy='59.13' r='1.32' opacity='0.47'/>
 <circle cx='88.54' cy='63.90' r='2.97' opacity='0.79'/>
 <circle cx='128.91' cy='64.18' r='4.05' opacity='0.96'/>
 <circle cx='143.48' cy='63.86' r='3.88' opacity='0.96'/>
 <circle cx='153.55' cy='63.91' r='3.91' opacity='0.96'/>
 <circle cx='163.63' cy='63.97' r='3.94' opacity='0.96'/>
 <circle cx='198.90' cy='64.17' r='4.04' opacity='0.96'/>
-<circle class='ambient' cx='233.93' cy='64.20' r='1.37' opacity='0.48'/>
-<circle class='ambient' cx='238.63' cy='63.97' r='1.25' opacity='0.48'/>
 <circle cx='93.72' cy='69.04' r='3.98' opacity='0.96'/>
 <circle cx='118.55' cy='68.91' r='3.91' opacity='0.96'/>
 <circle cx='133.54' cy='68.90' r='3.90' opacity='0.96'/>
 <circle cx='163.53' cy='68.90' r='3.90' opacity='0.96'/>
 <circle cx='173.53' cy='68.89' r='3.90' opacity='0.96'/>
 <circle cx='198.67' cy='69.00' r='3.96' opacity='0.96'/>
-<circle class='ambient' cx='253.86' cy='69.15' r='1.38' opacity='0.48'/>
 <circle cx='183.62' cy='73.96' r='3.93' opacity='0.96'/>
 <circle cx='188.49' cy='73.87' r='3.88' opacity='0.96'/>
 <circle cx='193.87' cy='74.15' r='4.03' opacity='0.96'/>
@@ -94,21 +42,12 @@ circle{fill:#183d66}
 <circle cx='98.44' cy='78.83' r='3.77' opacity='0.94'/>
 <circle cx='133.71' cy='79.03' r='3.41' opacity='0.86'/>
 <circle cx='168.79' cy='79.09' r='3.77' opacity='0.92'/>
-<circle class='ambient' cx='238.91' cy='79.19' r='1.35' opacity='0.47'/>
-<circle class='ambient' cx='248.56' cy='78.92' r='1.22' opacity='0.48'/>
-<circle class='ambient' cx='253.48' cy='78.86' r='1.21' opacity='0.48'/>
-<circle class='ambient' cx='258.88' cy='79.16' r='1.37' opacity='0.48'/>
 <circle cx='98.65' cy='83.99' r='3.74' opacity='0.92'/>
 <circle cx='103.81' cy='84.11' r='4.01' opacity='0.96'/>
-<circle class='ambient' cx='223.81' cy='84.11' r='1.31' opacity='0.47'/>
-<circle class='ambient' cx='228.51' cy='83.88' r='1.19' opacity='0.47'/>
 <circle cx='93.45' cy='88.84' r='3.52' opacity='0.90'/>
 <circle cx='123.45' cy='88.84' r='3.20' opacity='0.84'/>
 <circle cx='178.45' cy='88.84' r='2.86' opacity='0.78'/>
 <circle cx='203.74' cy='89.06' r='2.15' opacity='0.63'/>
-<circle class='ambient' cx='213.44' cy='88.83' r='1.15' opacity='0.47'/>
-<circle class='ambient' cx='218.76' cy='89.07' r='1.29' opacity='0.47'/>
-<circle class='ambient' cx='223.44' cy='88.83' r='1.16' opacity='0.47'/>
 <circle cx='93.78' cy='94.08' r='3.90' opacity='0.94'/>
 <circle cx='103.45' cy='93.83' r='3.87' opacity='0.96'/>
 <circle cx='108.87' cy='94.15' r='4.03' opacity='0.96'/>
@@ -117,26 +56,16 @@ circle{fill:#183d66}
 <circle cx='173.55' cy='93.91' r='2.85' opacity='0.77'/>
 <circle cx='193.71' cy='94.04' r='3.97' opacity='0.96'/>
 <circle cx='198.75' cy='94.06' r='3.99' opacity='0.96'/>
-<circle class='ambient' cx='203.67' cy='94.00' r='1.23' opacity='0.47'/>
-<circle class='ambient' cx='233.46' cy='93.85' r='1.19' opacity='0.48'/>
-<circle class='ambient' cx='238.77' cy='94.08' r='1.31' opacity='0.48'/>
 <circle cx='88.69' cy='99.02' r='3.85' opacity='0.94'/>
-<circle class='ambient' cx='138.64' cy='98.98' r='1.94' opacity='0.60'/>
 <circle cx='143.57' cy='98.93' r='2.06' opacity='0.63'/>
 <circle cx='148.48' cy='98.86' r='2.45' opacity='0.70'/>
 <circle cx='193.58' cy='98.93' r='3.63' opacity='0.91'/>
-<circle class='ambient' cx='223.41' cy='98.80' r='1.15' opacity='0.47'/>
-<circle class='ambient' cx='228.44' cy='98.83' r='1.18' opacity='0.48'/>
-<circle class='ambient' cx='238.68' cy='99.01' r='1.27' opacity='0.48'/>
-<circle class='ambient' cx='253.42' cy='98.82' r='1.19' opacity='0.48'/>
 <circle cx='103.58' cy='103.93' r='3.92' opacity='0.96'/>
 <circle cx='153.80' cy='104.10' r='2.25' opacity='0.64'/>
-<circle class='ambient' cx='213.50' cy='103.87' r='1.13' opacity='0.46'/>
 <circle cx='98.71' cy='109.03' r='3.77' opacity='0.92'/>
 <circle cx='118.46' cy='108.85' r='3.30' opacity='0.86'/>
 <circle cx='133.91' cy='109.19' r='2.47' opacity='0.68'/>
 <circle cx='188.49' cy='108.87' r='2.85' opacity='0.77'/>
-<circle class='ambient' cx='263.40' cy='108.80' r='1.19' opacity='0.48'/>
 <circle cx='88.75' cy='114.06' r='3.66' opacity='0.90'/>
 <circle cx='158.78' cy='114.09' r='2.74' opacity='0.73'/>
 <circle cx='193.59' cy='113.94' r='2.79' opacity='0.76'/>
@@ -145,60 +74,32 @@ circle{fill:#183d66}
 <circle cx='118.85' cy='119.13' r='3.64' opacity='0.89'/>
 <circle cx='123.78' cy='119.09' r='3.72' opacity='0.91'/>
 <circle cx='153.62' cy='118.96' r='3.23' opacity='0.83'/>
-<circle class='ambient' cx='243.82' cy='119.11' r='1.36' opacity='0.48'/>
 <circle cx='108.84' cy='124.13' r='2.49' opacity='0.68'/>
 <circle cx='133.50' cy='123.87' r='3.76' opacity='0.94'/>
 <circle cx='148.78' cy='124.09' r='3.37' opacity='0.85'/>
-<circle class='ambient' cx='238.75' cy='124.07' r='1.32' opacity='0.48'/>
-<circle class='ambient' cx='253.52' cy='123.89' r='1.24' opacity='0.48'/>
 <circle cx='138.51' cy='128.88' r='3.85' opacity='0.95'/>
 <circle cx='158.47' cy='128.85' r='2.81' opacity='0.77'/>
-<circle class='ambient' cx='213.71' cy='129.03' r='1.19' opacity='0.46'/>
 <circle cx='103.86' cy='134.14' r='2.25' opacity='0.64'/>
 <circle cx='123.62' cy='133.97' r='3.28' opacity='0.84'/>
 <circle cx='178.41' cy='133.81' r='3.85' opacity='0.96'/>
 <circle cx='193.52' cy='133.89' r='2.15' opacity='0.65'/>
-<circle class='ambient' cx='218.47' cy='133.85' r='1.16' opacity='0.47'/>
-<circle class='ambient' cx='258.57' cy='133.93' r='1.28' opacity='0.48'/>
 <circle cx='103.86' cy='139.14' r='2.10' opacity='0.61'/>
 <circle cx='128.92' cy='139.19' r='3.75' opacity='0.91'/>
 <circle cx='138.70' cy='139.02' r='2.57' opacity='0.71'/>
 <circle cx='163.90' cy='139.17' r='3.16' opacity='0.80'/>
 <circle cx='178.70' cy='139.03' r='3.84' opacity='0.94'/>
-<circle class='ambient' cx='213.56' cy='138.92' r='1.13' opacity='0.46'/>
-<circle class='ambient' cx='233.72' cy='139.04' r='1.30' opacity='0.48'/>
-<circle class='ambient' cx='253.91' cy='139.19' r='1.41' opacity='0.48'/>
-<circle class='ambient' cx='113.83' cy='144.12' r='1.62' opacity='0.53'/>
-<circle class='ambient' cx='123.54' cy='143.91' r='1.97' opacity='0.61'/>
-<circle class='ambient' cx='153.54' cy='143.90' r='1.58' opacity='0.54'/>
-<circle class='ambient' cx='233.81' cy='144.10' r='1.32' opacity='0.48'/>
-<circle class='ambient' cx='108.86' cy='149.15' r='1.94' opacity='0.58'/>
-<circle class='ambient' cx='128.86' cy='149.14' r='1.88' opacity='0.57'/>
-<circle class='ambient' cx='143.78' cy='149.09' r='1.58' opacity='0.52'/>
-<circle class='ambient' cx='233.43' cy='148.82' r='1.17' opacity='0.48'/>
-<circle class='ambient' cx='253.83' cy='149.12' r='1.36' opacity='0.48'/>
 <circle cx='83.70' cy='154.03' r='2.50' opacity='0.70'/>
-<circle class='ambient' cx='113.53' cy='153.90' r='1.86' opacity='0.59'/>
 <circle cx='173.83' cy='154.12' r='2.52' opacity='0.69'/>
-<circle class='ambient' cx='208.62' cy='153.97' r='1.16' opacity='0.46'/>
-<circle class='ambient' cx='228.68' cy='154.01' r='1.27' opacity='0.48'/>
-<circle class='ambient' cx='233.40' cy='153.80' r='1.16' opacity='0.48'/>
 <circle cx='103.44' cy='158.83' r='2.16' opacity='0.65'/>
 <circle cx='183.82' cy='159.12' r='2.54' opacity='0.69'/>
-<circle class='ambient' cx='223.62' cy='158.96' r='1.23' opacity='0.47'/>
 <circle cx='163.69' cy='164.02' r='2.75' opacity='0.74'/>
 <circle cx='183.46' cy='168.84' r='2.59' opacity='0.73'/>
 <circle cx='193.83' cy='169.12' r='2.97' opacity='0.77'/>
-<circle class='ambient' cx='228.77' cy='169.08' r='1.29' opacity='0.47'/>
-<circle class='ambient' cx='243.77' cy='169.08' r='1.31' opacity='0.48'/>
 <circle cx='133.91' cy='174.18' r='2.13' opacity='0.61'/>
 <circle cx='148.80' cy='174.10' r='3.81' opacity='0.92'/>
 <circle cx='198.89' cy='174.17' r='2.50' opacity='0.68'/>
-<circle class='ambient' cx='238.41' cy='173.80' r='1.15' opacity='0.47'/>
-<circle class='ambient' cx='243.62' cy='173.97' r='1.25' opacity='0.48'/>
 <circle cx='118.63' cy='178.98' r='2.16' opacity='0.64'/>
 <circle cx='163.92' cy='179.19' r='4.05' opacity='0.96'/>
-<circle class='ambient' cx='233.86' cy='179.14' r='1.33' opacity='0.47'/>
 <circle cx='103.61' cy='183.95' r='2.40' opacity='0.69'/>
 <circle cx='128.67' cy='184.00' r='2.64' opacity='0.72'/>
 <circle cx='188.78' cy='184.08' r='2.61' opacity='0.71'/>
@@ -210,13 +111,11 @@ circle{fill:#183d66}
 <circle cx='113.67' cy='194.00' r='2.38' opacity='0.68'/>
 <circle cx='148.87' cy='199.15' r='3.39' opacity='0.84'/>
 <circle cx='168.64' cy='198.98' r='2.98' opacity='0.79'/>
-<circle class='ambient' cx='208.72' cy='199.04' r='1.21' opacity='0.46'/>
 <circle cx='108.54' cy='203.90' r='3.37' opacity='0.86'/>
 <circle cx='118.47' cy='203.85' r='2.86' opacity='0.78'/>
 <circle cx='168.72' cy='204.04' r='2.66' opacity='0.72'/>
 <circle cx='103.87' cy='209.15' r='3.32' opacity='0.83'/>
 <circle cx='123.52' cy='208.89' r='3.50' opacity='0.89'/>
-<circle class='ambient' cx='213.64' cy='208.98' r='1.20' opacity='0.47'/>
 <circle cx='98.86' cy='214.14' r='2.30' opacity='0.65'/>
 <circle cx='178.45' cy='213.84' r='2.30' opacity='0.68'/>
 <circle cx='133.89' cy='219.17' r='4.04' opacity='0.96'/>
@@ -231,32 +130,25 @@ circle{fill:#183d66}
 <circle cx='178.86' cy='229.15' r='2.86' opacity='0.75'/>
 <circle cx='158.47' cy='233.85' r='3.41' opacity='0.88'/>
 <circle cx='163.63' cy='233.97' r='3.31' opacity='0.85'/>
-<circle class='ambient' cx='103.62' cy='238.96' r='1.52' opacity='0.53'/>
 <circle cx='133.83' cy='239.12' r='3.53' opacity='0.87'/>
 <circle cx='168.55' cy='238.91' r='3.68' opacity='0.92'/>
-<circle class='ambient' cx='98.43' cy='243.82' r='1.46' opacity='0.53'/>
 <circle cx='173.69' cy='244.02' r='2.17' opacity='0.64'/>
 <circle cx='113.62' cy='248.97' r='3.94' opacity='0.96'/>
 <circle cx='138.41' cy='248.80' r='3.19' opacity='0.84'/>
 <circle cx='153.51' cy='248.89' r='3.23' opacity='0.84'/>
 <circle cx='158.49' cy='248.87' r='3.35' opacity='0.86'/>
-<circle class='ambient' cx='178.64' cy='248.98' r='1.86' opacity='0.59'/>
 <circle cx='183.78' cy='254.08' r='3.99' opacity='0.96'/>
 <circle cx='118.76' cy='264.07' r='3.39' opacity='0.85'/>
 <circle cx='128.41' cy='263.81' r='2.48' opacity='0.71'/>
 <circle cx='178.82' cy='264.12' r='4.02' opacity='0.96'/>
 <circle cx='133.80' cy='269.10' r='2.69' opacity='0.72'/>
-<circle class='ambient' cx='143.56' cy='278.92' r='1.91' opacity='0.60'/>
 <circle cx='153.64' cy='283.98' r='3.17' opacity='0.82'/>
 <circle cx='168.49' cy='283.87' r='3.42' opacity='0.88'/>
 </g>
 <g class='dot-layer l1'>
-<circle class='ambient' cx='229.02' cy='24.27' r='1.45' opacity='0.48'/>
 <circle cx='144.39' cy='29.54' r='2.01' opacity='0.56'/>
-<circle class='ambient' cx='218.98' cy='29.23' r='1.42' opacity='0.48'/>
 <circle cx='143.99' cy='34.24' r='3.58' opacity='0.87'/>
 <circle cx='179.13' cy='34.35' r='2.80' opacity='0.72'/>
-<circle class='ambient' cx='228.94' cy='34.20' r='1.41' opacity='0.48'/>
 <circle cx='134.02' cy='39.26' r='4.02' opacity='0.95'/>
 <circle cx='139.29' cy='39.47' r='4.20' opacity='0.96'/>
 <circle cx='149.14' cy='39.36' r='4.14' opacity='0.96'/>
@@ -268,7 +160,6 @@ circle{fill:#183d66}
 <circle cx='129.08' cy='54.31' r='4.11' opacity='0.96'/>
 <circle cx='134.34' cy='54.51' r='4.22' opacity='0.96'/>
 <circle cx='144.31' cy='54.49' r='4.21' opacity='0.96'/>
-<circle class='ambient' cx='238.95' cy='54.21' r='1.40' opacity='0.48'/>
 <circle cx='109.31' cy='59.49' r='4.21' opacity='0.96'/>
 <circle cx='139.45' cy='59.59' r='4.26' opacity='0.96'/>
 <circle cx='154.32' cy='59.49' r='4.21' opacity='0.96'/>
@@ -305,14 +196,12 @@ circle{fill:#183d66}
 <circle cx='99.36' cy='94.52' r='4.23' opacity='0.96'/>
 <circle cx='144.24' cy='94.43' r='3.05' opacity='0.76'/>
 <circle cx='184.18' cy='94.39' r='3.30' opacity='0.81'/>
-<circle class='ambient' cx='258.98' cy='94.24' r='1.41' opacity='0.48'/>
 <circle cx='104.20' cy='99.40' r='4.16' opacity='0.96'/>
 <circle cx='113.97' cy='99.23' r='3.88' opacity='0.93'/>
 <circle cx='169.31' cy='99.48' r='3.06' opacity='0.75'/>
 <circle cx='174.14' cy='99.35' r='3.18' opacity='0.79'/>
 <circle cx='189.11' cy='99.33' r='3.21' opacity='0.79'/>
 <circle cx='134.36' cy='104.52' r='2.13' opacity='0.58'/>
-<circle class='ambient' cx='139.04' cy='104.28' r='2.00' opacity='0.58'/>
 <circle cx='149.24' cy='104.43' r='2.57' opacity='0.67'/>
 <circle cx='184.25' cy='104.44' r='3.19' opacity='0.78'/>
 <circle cx='88.99' cy='109.24' r='3.80' opacity='0.91'/>
@@ -342,7 +231,6 @@ circle{fill:#183d66}
 <circle cx='169.06' cy='129.29' r='4.11' opacity='0.96'/>
 <circle cx='174.18' cy='129.38' r='3.86' opacity='0.91'/>
 <circle cx='194.32' cy='129.49' r='2.47' opacity='0.65'/>
-<circle class='ambient' cx='258.94' cy='129.20' r='1.42' opacity='0.48'/>
 <circle cx='99.07' cy='139.30' r='2.15' opacity='0.61'/>
 <circle cx='109.20' cy='139.40' r='2.26' opacity='0.62'/>
 <circle cx='119.40' cy='139.55' r='2.50' opacity='0.65'/>
@@ -356,7 +244,6 @@ circle{fill:#183d66}
 <circle cx='109.33' cy='154.50' r='2.33' opacity='0.62'/>
 <circle cx='149.37' cy='154.53' r='3.96' opacity='0.91'/>
 <circle cx='159.29' cy='154.47' r='3.20' opacity='0.78'/>
-<circle class='ambient' cx='253.97' cy='154.23' r='1.42' opacity='0.48'/>
 <circle cx='94.28' cy='159.46' r='2.11' opacity='0.58'/>
 <circle cx='149.46' cy='159.59' r='3.77' opacity='0.87'/>
 <circle cx='159.32' cy='159.49' r='3.57' opacity='0.84'/>
@@ -366,7 +253,6 @@ circle{fill:#183d66}
 <circle cx='159.18' cy='169.38' r='3.18' opacity='0.78'/>
 <circle cx='189.19' cy='169.39' r='2.83' opacity='0.72'/>
 <circle cx='199.25' cy='169.44' r='3.83' opacity='0.90'/>
-<circle class='ambient' cx='94.05' cy='174.29' r='1.68' opacity='0.52'/>
 <circle cx='104.32' cy='174.49' r='2.69' opacity='0.69'/>
 <circle cx='178.96' cy='174.22' r='2.66' opacity='0.71'/>
 <circle cx='129.46' cy='179.59' r='3.67' opacity='0.85'/>
@@ -387,7 +273,6 @@ circle{fill:#183d66}
 <circle cx='113.99' cy='199.24' r='2.72' opacity='0.72'/>
 <circle cx='144.03' cy='199.27' r='2.63' opacity='0.70'/>
 <circle cx='144.05' cy='204.29' r='3.41' opacity='0.83'/>
-<circle class='ambient' cx='218.95' cy='204.21' r='1.34' opacity='0.47'/>
 <circle cx='149.39' cy='209.54' r='4.08' opacity='0.93'/>
 <circle cx='164.47' cy='209.60' r='3.44' opacity='0.81'/>
 <circle cx='114.27' cy='214.46' r='3.90' opacity='0.91'/>
@@ -407,7 +292,6 @@ circle{fill:#183d66}
 <circle cx='159.29' cy='229.47' r='3.80' opacity='0.89'/>
 <circle cx='134.30' cy='234.47' r='3.85' opacity='0.90'/>
 <circle cx='169.10' cy='234.33' r='3.55' opacity='0.86'/>
-<circle class='ambient' cx='179.26' cy='239.44' r='1.94' opacity='0.56'/>
 <circle cx='124.45' cy='249.59' r='2.52' opacity='0.65'/>
 <circle cx='144.31' cy='249.49' r='3.52' opacity='0.84'/>
 <circle cx='163.94' cy='249.21' r='3.88' opacity='0.93'/>

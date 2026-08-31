@@ -1,0 +1,56 @@
+{
+  "$schema": "https://pmoe7.com/api/schemas/projects.schema.json",
+  "name": "Selected projects by Mohammed Perves",
+  "url": "https://pmoe7.com/projects.html",
+  "author": { "name": "Mohammed Perves", "url": "https://pmoe7.com/about.html" },
+  "lastUpdated": "2026-08-30",
+  "projects": [
+    {
+      "id": "investopia",
+      "name": "InvestOpia",
+      "category": ["Data product", "Quantitative finance"],
+      "description": "Market-intelligence platform combining financial data, business news, social signals, and sentiment analysis in one research workflow.",
+      "technologies": ["Python", "Flask", "MySQL", "scikit-learn", "NLTK"],
+      "sourceUrl": "https://github.com/pmoe7/InvestOpia",
+      "image": "https://pmoe7.com/img/investopia_view.JPG"
+    },
+    {
+      "id": "content-aware-image-repository",
+      "name": "Content-aware image repository",
+      "category": ["Computer vision", "Product"],
+      "description": "Searchable image library that detects objects at upload and makes visual content discoverable by what appears in each image.",
+      "sourceUrl": "https://github.com/pmoe7/Shopify-SWE-Image-Repo",
+      "image": "https://pmoe7.com/img/img_repo.PNG"
+    },
+    {
+      "id": "ryzer",
+      "name": "Ryzer",
+      "category": ["Education", "Web product"],
+      "description": "Resume-sharing platform and ATS parser that served more than 1,500 students.",
+      "image": "https://pmoe7.com/img/ryzer.JPG"
+    },
+    {
+      "id": "comparable-company-analysis",
+      "name": "Systematic Comparable Company Analysis and Computation of Cost of Equity using Clustering",
+      "category": ["Research", "Machine learning", "Finance"],
+      "description": "Systematic peer selection and cost-of-equity estimation using spectral and agglomerative clustering.",
+      "publicationDate": "2024-04-25",
+      "url": "https://arxiv.org/abs/2405.12991",
+      "doi": "https://doi.org/10.48550/arXiv.2405.12991"
+    },
+    {
+      "id": "equitable-vaccine-distribution",
+      "name": "Equitable vaccine distribution",
+      "category": ["Optimization", "Public health", "Machine learning"],
+      "description": "Two-level framework for individual vaccine prioritization and regional vaccine allocation.",
+      "url": "https://pmoe7.com/covid.html",
+      "image": "https://pmoe7.com/img/covid-ml.png"
+    },
+    {
+      "id": "quantitative-trading-research",
+      "name": "Quantitative trading research",
+      "category": ["Machine learning", "Capital markets"],
+      "description": "Experiments using clustering, cointegration, natural-language processing, sentiment signals, and reinforcement learning."
+    }
+  ]
+}
