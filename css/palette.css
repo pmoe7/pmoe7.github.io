@@ -1,0 +1,339 @@
+/* Canonical site palette. Loaded last on every page; components reference roles,
+   not page-specific hex colors. Photographs, charts, and document assets retain
+   their source colors. Inverse roles stay stable over photography and dark bands. */
+:root {
+  --color-canvas: #faf9f6;
+  --color-surface: #fffdf9;
+  --color-surface-muted: #f2efe9;
+  --color-text: #171515;
+  --color-text-muted: #69645f;
+  --color-border: #c8c0b7;
+  --color-brand: #4c1421;
+  --color-accent: #4c1421;
+  --color-accent-hover: #651c2c;
+  --color-accent-soft: #eee9e2;
+  --color-gold: #87672d;
+  --color-focus: #87672d;
+  --color-action-bg: #4c1421;
+  --color-action-hover: #611a2a;
+  --color-action-text: #faf9f6;
+  --color-inverse-bg: #1b0b11;
+  --color-inverse-raised: #2a101a;
+  --color-inverse-text: #faf9f6;
+  --color-inverse-muted: #bdb4b0;
+  --color-inverse-border: #6e5c62;
+  --color-inverse-hover: #3a1421;
+  --color-inverse-gold: #d2b674;
+  --color-document-bg: #ffffff;
+  --color-document-text: #373137;
+  --color-document-border: #dedad2;
+  --color-backdrop: rgba(18, 9, 13, .82);
+  --color-shadow: rgba(18, 9, 13, .2);
+  --color-highlight: rgba(250, 249, 246, .08);
+  --color-selection: #4c1421;
+  --color-selection-text: #faf9f6;
+  --color-hero: linear-gradient(118deg, #12090d, #2e101b 62%, #1b0b11);
+}
+html[data-theme="dark"] {
+  --color-canvas: #0b0c0d;
+  --color-surface: #151619;
+  --color-surface-muted: #202124;
+  --color-text: #f1efea;
+  --color-text-muted: #b5ada9;
+  --color-border: #574d54;
+  --color-accent: #f1efea;
+  --color-accent-hover: #d2b674;
+  --color-accent-soft: #2c1019;
+  --color-gold: #d2b674;
+  --color-focus: #d2b674;
+}
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme]) {
+    --color-canvas: #0b0c0d;
+    --color-surface: #151619;
+    --color-surface-muted: #202124;
+    --color-text: #f1efea;
+    --color-text-muted: #b5ada9;
+    --color-border: #574d54;
+    --color-accent: #f1efea;
+    --color-accent-hover: #d2b674;
+    --color-accent-soft: #2c1019;
+    --color-gold: #d2b674;
+    --color-focus: #d2b674;
+  }
+}
+/* Bridge existing components to the same roles in both themes. */
+:root, html[data-theme], html:not([data-theme]) {
+  --ink: var(--color-text);
+  --truffle: var(--color-text-muted);
+  --surface: var(--color-canvas);
+  --surface-raised: var(--color-surface);
+  --paper-2: var(--color-surface-muted);
+  --paper: var(--color-inverse-text);
+  --white: var(--color-inverse-text);
+  --line: var(--color-border);
+  --red: var(--color-brand);
+  --burgundy-dark: var(--color-inverse-bg);
+  --gold: var(--color-gold);
+  --gold-soft: var(--color-gold);
+}
+html .site-ui, html[data-theme] .site-ui {
+  --work-accent: var(--color-accent);
+  --work-muted: var(--color-text-muted);
+  --projects-warm: var(--color-canvas);
+  --projects-copy: var(--color-text);
+  --writing-warm: var(--color-canvas);
+  --writing-copy: var(--color-text);
+  --about-warm: var(--color-canvas);
+  --about-copy: var(--color-text);
+  --case-warm: var(--color-canvas);
+  --case-copy: var(--color-text);
+  --control-ink: var(--color-action-text);
+  --control-surface: var(--color-action-bg);
+  --control-edge: var(--color-inverse-border);
+  --panel-ink: var(--color-text);
+  --panel-hover: var(--color-accent-soft);
+  --panel-edge: var(--color-border);
+}
+body { background-color: var(--color-canvas); color: var(--color-text); }
+::selection { background: var(--color-selection); color: var(--color-selection-text); }
+/* Header controls keep the same contrast over every section and photograph. */
+html[data-theme] .site-ui .site-header .topbar > .icon-button,
+html .site-ui .site-header .topbar-actions {
+  background: var(--color-inverse-bg);
+  color: var(--color-inverse-text);
+  border-color: var(--color-inverse-border);
+  box-shadow: none;
+}
+html[data-theme] .site-ui .site-header .topbar-actions .icon-button {
+  background: transparent; color: var(--color-inverse-text); border-color: transparent; box-shadow: none;
+}
+html[data-theme] .site-ui .site-header .topbar .icon-button:hover,
+html[data-theme] .site-ui .site-header .topbar .icon-button[aria-expanded="true"] {
+  color: var(--color-inverse-gold);
+}
+html[data-theme] .site-ui .site-header .topbar .lucide { filter: none; }
+html .site-ui .site-header :focus-visible { outline-color: var(--color-inverse-gold); }
+/* The drawer follows the page theme; search and seasonal popovers are inverse. */
+html .site-ui .menu-drawer {
+  background: var(--color-surface); color: var(--color-text);
+  border-color: var(--color-border); box-shadow: none;
+}
+html .site-ui .menu-drawer::before { border-color: var(--color-border); box-shadow: none; }
+html .site-ui .menu-drawer :is(.menu-person strong, .panel-title, .brand-name) { color: var(--color-text); }
+html .site-ui .menu-drawer :is(.menu-person small, .sub-links a) { color: var(--color-text-muted); }
+html .site-ui .menu-drawer :is(.menu-identity, .panel-top, .menu-footer, .menu-socials) { border-color: var(--color-border); }
+html .site-ui .menu-drawer .menu-link[aria-current="page"] { background: var(--color-accent-soft); color: var(--color-text); border-color: transparent; }
+html .site-ui .menu-drawer :is(.icon-button, .social-circle) { background: var(--color-surface); }
+html .site-ui .search-box .search-input-wrap { background: var(--color-inverse-bg); border-color: var(--color-inverse-border); }
+html .site-ui .search-box .search-input-wrap:focus-within { border-color: var(--color-inverse-gold); }
+html .site-ui .search-box .search-results, html .site-ui .season-options {
+  background: var(--color-inverse-bg); color: var(--color-inverse-text); border-color: var(--color-inverse-border);
+}
+html .site-ui .search-box .search-results a:hover,
+html .site-ui .search-box .search-results a:focus-visible { background: var(--color-inverse-hover); }
+html .site-ui .search-box :focus-visible, html .site-ui .season-choice:focus-within { outline-color: var(--color-inverse-gold); }
+html .site-ui .season-choice-mark { color: var(--color-inverse-gold); }
+/* One set of fills for buttons, including legacy form and download controls. */
+html .site-ui main .btn:hover,
+html .site-ui .home-hero .hero-link:hover,
+html .site-ui .site-footer .footer-socials :is(.social-circle, .icon-button):hover {
+  background: var(--color-action-hover); color: var(--color-action-text); border-color: var(--color-inverse-border);
+}
+html .site-ui .filter-bar .filter-button[aria-pressed="true"] {
+  background: transparent; color: var(--color-accent); border-bottom-color: var(--color-gold); box-shadow: none;
+}
+html .site-ui .site-footer { background-color: var(--color-canvas); color: var(--color-text-muted); border-color: var(--color-border); }
+html .site-ui .site-footer .brand-lockup { color: var(--color-text); }
+html .site-ui .site-footer a:not(.social-circle):hover { color: var(--color-accent); }
+html .home-page.site-ui .site-footer { background: transparent; color: var(--color-inverse-muted); }
+html .home-page.site-ui .site-footer .brand-lockup { color: var(--color-inverse-text); }
+html .home-page.site-ui .site-footer a:not(.social-circle):hover { color: var(--color-inverse-gold); }
+/* Dark editorial sections use one burgundy family; gold is decorative emphasis. */
+html .site-ui :is(.about-opening, .about-who, .about-manifesto, .projects-hero, .projects-current, .writing-hero, .subscribe-band, .case-hero, .case-model, .case-ethics, .case-next, .work-current) {
+  background: var(--color-hero); color: var(--color-inverse-text);
+  --gold: var(--color-inverse-gold); --gold-soft: var(--color-inverse-gold);
+  --truffle: var(--color-inverse-muted); --line: var(--color-inverse-border);
+}
+html .site-ui :is(.about-beliefs, .projects-index, .writing-index)::before { background: none; }
+html .site-ui .about-beliefs { background: var(--color-canvas); }
+html .site-ui :is(.case-model-label, .case-node-three) { color: var(--color-inverse-gold); }
+html .site-ui .case-node-three { background: var(--color-inverse-gold); }
+html .site-ui .case-orbit { border-color: var(--color-inverse-border); }
+html .site-ui :is(.case-back, .case-hero-summary > p, .case-hero-summary dd, .case-model-card > p:not(.case-model-label), .case-model-card li, .case-ethics li, .case-ethics-grid > div:last-child > p) { color: var(--color-inverse-muted); }
+/* Archive and resume content inherits the same surfaces and readable foregrounds. */
+html .site-ui.legacy-page .legacy-main { color: var(--color-text); }
+html .site-ui.legacy-page .legacy-main .bg-color::before,
+html .site-ui.legacy-page .legacy-main :is(.bg-color, .resume-info, .resume-section, .resume-header) { background-color: var(--color-surface); }
+html .site-ui.legacy-page .legacy-main :is(h1, h2, h3, h4, h5, h6, .title, .sub-content, .address, .text-info) { color: var(--color-text); }
+html .site-ui.legacy-page .legacy-main :is(a:not(.btn), .icons, .cat-ul i) { color: var(--color-accent); }
+html .site-ui.legacy-page .legacy-main a:not(.btn):hover { color: var(--color-accent-hover); }
+html .site-ui.legacy-page .legacy-main .progress { background: var(--color-surface-muted); }
+html .site-ui.legacy-page .legacy-main .progress-bar { background: var(--color-action-bg); }
+html .site-ui.legacy-page .legacy-main :is(input, textarea) { border-color: var(--color-border); background: var(--color-surface); color: var(--color-text); }
+/* Legacy CSS removes focus with !important; restore it consistently. */
+html .site-ui :is(a, button, input, textarea, summary):focus-visible { outline: 2px solid var(--color-focus) !important; outline-offset: 3px; }
+html .site-ui :is(.site-header, .search-box, .season-options, .work-viewer, .work-current) :focus-visible { outline-color: var(--color-inverse-gold) !important; }
+html .site-ui .work-viewer::backdrop, html .site-ui .overlay-backdrop { background: var(--color-backdrop); }
+@media (max-width: 760px) { html .site-ui .menu-overlay { background: var(--color-surface); } }
+/* Redirect fallbacks share the palette even when JavaScript is unavailable. */
+.redirect-page { margin: 0; padding: 3rem; background: var(--color-canvas); color: var(--color-text); }
+.redirect-page a { color: var(--color-accent); }
+
+/* Restrained burgundy accents: flat surfaces, fine edges, no pink highlights. */
+html .site-ui .site-header .topbar > .icon-button,
+html .site-ui .site-header .topbar-actions { border-radius: 999px; }
+html .site-ui .essay-row:hover .essay-action { background: var(--color-brand); color: var(--color-action-text); border-color: var(--color-brand); }
+html .site-ui .work-filters button[aria-pressed="true"] { border-bottom-color: var(--color-gold); }
+html .site-ui .work-intro h1 span { color: var(--color-gold); }
+
+/* Shared toolbar treatment stays consistent over every page surface. */
+html .site-ui .site-header .topbar {
+  height: 64px;
+  padding-inline: clamp(16px, 2.2vw, 32px);
+}
+html .site-ui .search-overlay .search-box {
+  right: clamp(16px, 2.2vw, 32px);
+  width: min(390px, calc(100vw - clamp(32px, 4.4vw, 64px) - 64px));
+}
+.site-ui {
+  --toolbar-ink: var(--color-inverse-text);
+  --toolbar-edge: #78686d;
+}
+html[data-theme] .site-ui .site-header .topbar > .icon-button,
+html[data-theme] .site-ui .site-header .topbar-actions {
+  background: rgba(27, 11, 17, .72);
+  color: var(--toolbar-ink);
+  border-width: 2px;
+  border-color: var(--toolbar-edge);
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+/* Account for the stronger edge without changing the toolbar's outer size. */
+html .site-ui .site-header .topbar-actions { padding: 1px; }
+html[data-theme] .site-ui .site-header .topbar .icon-button,
+html[data-theme] .site-ui .site-header .topbar .season-trigger {
+  color: var(--toolbar-ink);
+}
+html[data-theme] .site-ui .site-header .topbar-actions .icon-button,
+html[data-theme] .site-ui .site-header .topbar .season-trigger { background-color: transparent; }
+html[data-theme] .site-ui .site-header .topbar .icon-button:hover,
+html[data-theme] .site-ui .site-header .topbar .icon-button[aria-expanded="true"] {
+  background: color-mix(in srgb, var(--toolbar-ink) 8%, transparent);
+  color: var(--toolbar-ink);
+}
+html .site-ui .site-header :focus-visible { outline-color: var(--toolbar-ink) !important; }
+html .site-ui .site-footer .footer-socials :is(.social-circle, .icon-button),
+html .site-ui .menu-drawer :is(.social-circle, .icon-button) {
+  background: transparent;
+  border-width: 2px;
+  border-color: var(--color-border);
+  color: var(--color-text);
+  box-shadow: none;
+}
+html .home-page.site-ui .site-footer .footer-socials :is(.social-circle, .icon-button) {
+  color: var(--color-inverse-text);
+  border-color: #78686d;
+}
+html .site-ui .site-footer .footer-socials :is(.social-circle, .icon-button):hover,
+html .site-ui .menu-drawer :is(.social-circle, .icon-button):hover {
+  background: transparent;
+  border-color: currentColor;
+  color: var(--color-accent);
+}
+html .home-page.site-ui .site-footer .footer-socials :is(.social-circle, .icon-button):hover {
+  color: var(--color-inverse-gold);
+}
+html .site-ui .home-hero .hero-link,
+html .site-ui .home-hero .hero-link:hover {
+  padding: 8px 0;
+  border: 0;
+  border-bottom: 1px solid rgba(250, 249, 246, .45);
+  border-radius: 0;
+  background: transparent;
+  color: var(--color-inverse-text);
+}
+html .site-ui .home-hero .hero-link:hover { border-bottom-color: currentColor; }
+html .site-ui .essay-row:hover .essay-action {
+  background: transparent;
+  color: var(--color-accent);
+  border-color: var(--color-border);
+}
+
+/* Solid panel edges avoid the haze of layered glass effects. */
+html .site-ui .menu-drawer,
+html .site-ui .search-box .search-input-wrap,
+html .site-ui .search-box .search-results,
+html .site-ui .season-options {
+  box-shadow: none;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+html .site-ui .search-box .search-input-wrap,
+html .site-ui .search-box .search-results,
+html .site-ui .season-options,
+html .site-ui main .btn,
+html .site-ui .essay-action {
+  border-width: 2px;
+}
+
+/* Mobile landing: leave the portrait open and give controls a quiet surface. */
+@media (max-width: 760px) {
+  html .home-page.site-ui {
+    height: auto;
+    min-height: 100svh;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  html .home-page.site-ui .home-main { height: auto; }
+  html .site-ui .site-header .topbar {
+    height: calc(74px + env(safe-area-inset-top));
+    padding-top: env(safe-area-inset-top);
+    padding-inline: 20px;
+  }
+  html .home-page.site-ui .site-header .topbar .season-trigger {
+    width: 80px;
+    padding-left: 10px;
+  }
+  html .home-page.site-ui .home-hero {
+    --home-footer-reserve: calc(88px + env(safe-area-inset-bottom));
+    min-height: 640px;
+    min-height: max(640px, 100svh);
+    height: 100dvh;
+    min-height: max(640px, 100dvh);
+    padding-top: calc(74px + env(safe-area-inset-top));
+    row-gap: 20px;
+  }
+  html .home-page.site-ui .hero-content { padding-inline: 24px; }
+  html .home-page.site-ui .hero-name-wordmark { width: min(100%, 280px); }
+  html .home-page.site-ui .hero-title { margin-bottom: 12px; }
+  html .home-page.site-ui .hero-support { gap: 18px; }
+  html .home-page.site-ui .hero-positioning { font-size: .8rem; }
+  html .home-page.site-ui .home-hero .hero-link { min-height: 48px; }
+  html .home-page.site-ui .site-footer {
+    padding: 16px 0 calc(20px + env(safe-area-inset-bottom));
+  }
+  html .home-page.site-ui .footer-inner {
+    width: 100%;
+    padding-inline: 24px;
+    grid-template-columns: 44px auto;
+    align-items: center;
+    gap: 20px;
+  }
+  html .home-page.site-ui .footer-brand .brand-name,
+  html .home-page.site-ui .footer-tagline,
+  html .home-page.site-ui .footer-right > span,
+  html .home-page.site-ui .footer-right > a { display: none; }
+  html .home-page.site-ui .footer-brand .brand-seal {
+    width: 44px;
+    height: 44px;
+    flex-basis: 44px;
+  }
+  html .home-page.site-ui .footer-socials { gap: 8px; }
+  html .site-ui .search-overlay .search-box {
+    top: calc(12px + env(safe-area-inset-top));
+    right: 20px;
+  }
+}
+

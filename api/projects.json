@@ -2,55 +2,113 @@
   "$schema": "https://pmoe7.com/api/schemas/projects.schema.json",
   "name": "Selected projects by Mohammed Perves",
   "url": "https://pmoe7.com/projects.html",
-  "author": { "name": "Mohammed Perves", "url": "https://pmoe7.com/about.html" },
-  "lastUpdated": "2026-08-30",
+  "author": {
+    "name": "Mohammed Perves",
+    "url": "https://pmoe7.com/about.html"
+  },
+  "lastUpdated": "2026-09-27",
   "projects": [
+    {
+      "id": "akerai",
+      "name": "AkerAI",
+      "category": [
+        "AI",
+        "Platforms",
+        "Real estate"
+      ],
+      "description": "AI and platforms work at Aker, connecting institutional knowledge, operating data, analytics, and agents.",
+      "status": "Current",
+      "url": "https://aker-ai.com/",
+      "image": "https://pmoe7.com/img/projects/akerai-dashboard.png",
+      "images": [
+        "https://pmoe7.com/img/projects/akerai-dashboard.png",
+        "https://pmoe7.com/img/projects/akerai-products.png"
+      ]
+    },
     {
       "id": "investopia",
       "name": "InvestOpia",
-      "category": ["Data product", "Quantitative finance"],
+      "category": [
+        "Data product",
+        "Quantitative finance"
+      ],
       "description": "Market-intelligence platform combining financial data, business news, social signals, and sentiment analysis in one research workflow.",
-      "technologies": ["Python", "Flask", "MySQL", "scikit-learn", "NLTK"],
+      "technologies": [
+        "Python",
+        "Flask",
+        "MySQL",
+        "scikit-learn",
+        "NLTK"
+      ],
       "sourceUrl": "https://github.com/pmoe7/InvestOpia",
-      "image": "https://pmoe7.com/img/investopia_view.JPG"
+      "image": "https://pmoe7.com/img/investopia_view.JPG",
+      "year": "2020",
+      "dateNote": "Year documented in the portfolio archive"
     },
     {
       "id": "content-aware-image-repository",
       "name": "Content-aware image repository",
-      "category": ["Computer vision", "Product"],
+      "category": [
+        "Computer vision",
+        "Product"
+      ],
       "description": "Searchable image library that detects objects at upload and makes visual content discoverable by what appears in each image.",
       "sourceUrl": "https://github.com/pmoe7/Shopify-SWE-Image-Repo",
-      "image": "https://pmoe7.com/img/img_repo.PNG"
+      "image": "https://pmoe7.com/img/img_repo.PNG",
+      "year": "2021",
+      "dateNote": "Year documented in the portfolio archive"
     },
     {
       "id": "ryzer",
       "name": "Ryzer",
-      "category": ["Education", "Web product"],
+      "category": [
+        "Education",
+        "Web product"
+      ],
       "description": "Resume-sharing platform and ATS parser that served more than 1,500 students.",
-      "image": "https://pmoe7.com/img/ryzer.JPG"
+      "image": "https://pmoe7.com/img/ryzer.JPG",
+      "year": "2020",
+      "dateNote": "Year documented in the portfolio archive"
     },
     {
       "id": "comparable-company-analysis",
       "name": "Systematic Comparable Company Analysis and Computation of Cost of Equity using Clustering",
-      "category": ["Research", "Machine learning", "Finance"],
+      "category": [
+        "Research",
+        "Machine learning",
+        "Finance"
+      ],
       "description": "Systematic peer selection and cost-of-equity estimation using spectral and agglomerative clustering.",
       "publicationDate": "2024-04-25",
       "url": "https://arxiv.org/abs/2405.12991",
-      "doi": "https://doi.org/10.48550/arXiv.2405.12991"
+      "doi": "https://doi.org/10.48550/arXiv.2405.12991",
+      "year": "2024",
+      "dateNote": "Publication year"
     },
     {
       "id": "equitable-vaccine-distribution",
       "name": "Equitable vaccine distribution",
-      "category": ["Optimization", "Public health", "Machine learning"],
+      "category": [
+        "Optimization",
+        "Public health",
+        "Machine learning"
+      ],
       "description": "Two-level framework for individual vaccine prioritization and regional vaccine allocation.",
       "url": "https://pmoe7.com/covid.html",
-      "image": "https://pmoe7.com/img/covid-ml.png"
+      "image": "https://pmoe7.com/img/covid-ml.png",
+      "year": "2021",
+      "dateNote": "Year documented in the portfolio archive"
     },
     {
       "id": "quantitative-trading-research",
       "name": "Quantitative trading research",
-      "category": ["Machine learning", "Capital markets"],
-      "description": "Experiments using clustering, cointegration, natural-language processing, sentiment signals, and reinforcement learning."
+      "category": [
+        "Machine learning",
+        "Capital markets"
+      ],
+      "description": "Experiments using clustering, cointegration, natural-language processing, sentiment signals, and reinforcement learning.",
+      "year": "2021",
+      "dateNote": "Year documented in the portfolio archive"
     }
   ]
 }

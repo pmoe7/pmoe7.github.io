@@ -1,4 +1,4 @@
-# Mohammed Perves — AI-readable site context
+# Mohammed Perves: AI-readable site context
 
 Canonical identity: Mohammed Perves
 Canonical website: https://pmoe7.com/
@@ -35,12 +35,12 @@ Professional themes: AI as infrastructure, independent judgment, building from f
 URL: https://pmoe7.com/projects.html
 Purpose: Canonical project collection.
 
-1. InvestOpia — a market-intelligence workflow combining financial data, business news, social signals, and sentiment analysis. Technologies listed: Python, Flask, MySQL, scikit-learn, and NLTK. Source: https://github.com/pmoe7/InvestOpia
-2. Content-aware image repository — a searchable image library that detects objects at upload and supports content-based discovery. Source: https://github.com/pmoe7/Shopify-SWE-Image-Repo
-3. Ryzer — a resume-sharing and ATS-parser product that served more than 1,500 students.
-4. Systematic comparable-company analysis — research using spectral and agglomerative clustering to improve peer selection and cost-of-equity estimation. Original paper: https://arxiv.org/abs/2405.12991
-5. Equitable vaccine distribution — a two-level machine-learning framework for individual vaccine prioritization and regional allocation. Case study: https://pmoe7.com/covid.html
-6. Quantitative trading research — experiments involving pairs trading, momentum, clustering, cointegration, natural-language processing, and reinforcement learning.
+1. InvestOpia: a market-intelligence workflow combining financial data, business news, social signals, and sentiment analysis. Technologies listed: Python, Flask, MySQL, scikit-learn, and NLTK. Source: https://github.com/pmoe7/InvestOpia
+2. Content-aware image repository: a searchable image library that detects objects at upload and supports content-based discovery. Source: https://github.com/pmoe7/Shopify-SWE-Image-Repo
+3. Ryzer: a resume-sharing and ATS-parser product that served more than 1,500 students.
+4. Systematic comparable-company analysis: research using spectral and agglomerative clustering to improve peer selection and cost-of-equity estimation. Original paper: https://arxiv.org/abs/2405.12991
+5. Equitable vaccine distribution: a two-level machine-learning framework for individual vaccine prioritization and regional allocation. Case study: https://pmoe7.com/covid.html
+6. Quantitative trading research: experiments involving pairs trading, momentum, clustering, cointegration, natural-language processing, and reinforcement learning.
 
 ### Writing
 

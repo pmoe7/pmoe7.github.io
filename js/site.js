@@ -4,9 +4,6 @@
   const menuClose = document.querySelector('[data-menu-close]');
   const menuBackdrop = document.querySelector('[data-menu-backdrop]');
   const menuDrawer = document.querySelector('.menu-drawer');
-  const rootPanel = document.querySelector('[data-panel="root"]');
-  const panelTriggers = document.querySelectorAll('[data-panel-target]');
-  const panelBacks = document.querySelectorAll('[data-panel-back]');
   const search = document.querySelector('[data-search]');
   const searchOpen = document.querySelector('[data-search-open]');
   const searchClose = document.querySelector('[data-search-close]');
@@ -352,19 +349,14 @@
   const searchItems = [
     { label: 'Home | Mohammed Perves', url: 'index.html' },
     { label: 'About Mohammed Perves', url: 'about.html' },
-    { label: 'Projects — AI, data products, and machine learning', url: 'projects.html' },
-    { label: 'Equitable vaccine distribution — machine learning case study', url: 'covid.html' },
-    { label: 'Writing — AI, software, and capital', url: 'writing.html' },
-    { label: 'Law or Justice? — archived essay', url: 'law.html' },
+    { label: 'Projects: AI, data products, and machine learning', url: 'projects.html' },
+    { label: 'Equitable vaccine distribution: machine learning case study', url: 'covid.html' },
+    { label: 'Writing: AI, software, and capital', url: 'writing.html' },
+    { label: 'Law or Justice?: archived essay', url: 'law.html' },
     { label: 'Aker AI Platform', url: 'https://aker-ai.com/' },
     { label: 'The AI Leverage Index', url: 'https://www.linkedin.com/posts/pmoe7_one-of-my-favourite-metrics-for-measuring-activity-7361366021611401216-1IpB' },
     { label: 'AI is eating software', url: 'https://www.linkedin.com/posts/pmoe7_ai-activity-7427343198685143040-ouy8' }
   ];
-
-  function resetPanels() {
-    document.querySelectorAll('[data-panel]').forEach((panel) => panel.classList.remove('is-active'));
-    if (rootPanel) rootPanel.classList.remove('is-behind');
-  }
 
   function openMenu() {
     if (!menu) return;
@@ -382,7 +374,6 @@
     menu.classList.remove('is-open');
     menu.setAttribute('aria-hidden', 'true');
     menuOpen && menuOpen.setAttribute('aria-expanded', 'false');
-    resetPanels();
     if (lastFocus) lastFocus.focus();
   }
 
@@ -412,6 +403,7 @@
   menuOpen && menuOpen.addEventListener('click', openMenu);
   menuClose && menuClose.addEventListener('click', closeMenu);
   menuBackdrop && menuBackdrop.addEventListener('click', closeMenu);
+
   searchOpen && searchOpen.addEventListener('click', openSearch);
   searchClose && searchClose.addEventListener('click', closeSearch);
   searchBackdrop && searchBackdrop.addEventListener('click', closeSearch);
@@ -428,26 +420,6 @@
       const onSearchButton = searchOpen && searchOpen.contains(event.target);
       if (!insideSearch && !onSearchButton) closeSearch();
     }
-  });
-
-  panelTriggers.forEach((trigger) => {
-    trigger.addEventListener('click', () => {
-      const panel = document.querySelector('[data-panel="' + trigger.dataset.panelTarget + '"]');
-      if (panel) {
-        panel.classList.add('is-active');
-        rootPanel && rootPanel.classList.add('is-behind');
-        const back = panel.querySelector('[data-panel-back]');
-        window.setTimeout(() => back && back.focus(), 80);
-      }
-    });
-  });
-
-  panelBacks.forEach((button) => {
-    button.addEventListener('click', () => {
-      const panel = button.closest('[data-panel]');
-      panel && panel.classList.remove('is-active');
-      rootPanel && rootPanel.classList.remove('is-behind');
-    });
   });
 
   searchInput && searchInput.addEventListener('input', () => {
@@ -490,7 +462,6 @@
         first.focus();
       }
     }
-
     if (event.key === 'Escape') {
       if (menu && menu.classList.contains('is-open')) closeMenu();
       if (search && search.classList.contains('is-open')) closeSearch();

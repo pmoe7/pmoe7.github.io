@@ -1,0 +1,64 @@
+/* Shared collection shell, with a narrower editorial reading column. */
+.writing-page { --work-accent: var(--color-accent); --work-muted: var(--color-text-muted); --projects-warm: var(--writing-warm); }
+html[data-theme="dark"] .writing-page { --work-accent: var(--color-accent); --work-muted: var(--color-text-muted); }
+.writing-main { padding-top: 0; }
+.essay-list { border-top: 1px solid var(--line); }
+.work-toolbar:not([hidden]) + .essay-list { border-top: 0; }
+.essay-row { display: grid; grid-template-columns: 170px minmax(0,660px) 1fr; gap: 40px; align-items: start; padding: 36px 0; border-bottom: 1px solid var(--line); color: var(--ink); }
+.essay-row[hidden] { display: none; }
+.essay-meta { display: flex; flex-direction: column; align-items: start; gap: 9px; padding-top: 6px; font-size: .7rem; color: var(--work-muted); line-height: 1.6; }
+.essay-featured { color: var(--work-accent); font-size: .68rem; order: -1; letter-spacing: .035em; }
+.essay-source { font-size: .65rem; }
+.essay-copy { min-width: 0; }
+.essay-copy h3 { font-size: clamp(1.65rem,2.3vw,2.15rem); font-weight: 400; letter-spacing: -.035em; line-height: 1.2; margin: 0; text-wrap: balance; transition: color 160ms; }
+.essay-copy p { max-width: 57ch; color: var(--work-muted); font-size: .9rem; line-height: 1.8; margin: 13px 0 0; }
+.essay-action { display: inline-flex; align-items: center; justify-content: center; justify-self: end; width: 44px; min-height: 44px; font-size: 1.25rem; color: var(--work-accent); border: 1px solid transparent; border-radius: 50%; transition: border-color 160ms; }
+.essay-row:hover h3 { color: var(--work-accent); }
+.essay-row:hover .essay-action { border-color: var(--line); }
+.essay-row:focus-visible, .essay-archive a:focus-visible { outline: 2px solid var(--work-accent); outline-offset: 6px; }
+.essay-lead { padding: 56px 0; margin: 0; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; background: transparent; grid-template-columns: 170px minmax(0,660px) 1fr; }
+.essay-lead h3 { font-size: clamp(2.4rem,4.2vw,3.8rem); line-height: 1.07; max-width: 16ch; letter-spacing: -.045em; }
+.essay-lead .essay-copy p { max-width: 52ch; margin-top: 22px; }
+.essay-lead .essay-action { border-color: var(--line); }
+.essay-archive { margin: 26px 0 0; color: var(--work-muted); font-size: .75rem; }
+.essay-archive > span { padding-inline: 12px; opacity: .5; }
+.essay-archive a { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; color: var(--work-accent); }
+@media (max-width: 1000px) {
+  .essay-row { grid-template-columns: 120px minmax(0,1fr) 44px; gap: 24px; }
+  .essay-lead { grid-template-columns: 120px minmax(0,1fr) 44px; padding: 44px 0; }
+}
+@media (max-width: 760px) {
+  .writing-main .work-toolbar { align-items: start; flex-direction: column; gap: 0; padding-bottom: 12px; }
+  .writing-main .work-toolbar > p { margin: 4px 0 0; }
+  .writing-main .work-filters { gap: 20px; }
+  .writing-main .work-filters button { padding-block: 14px; }
+  .essay-row { grid-template-columns: minmax(0,1fr) 36px; gap: 14px 12px; padding: 28px 0; }
+  .essay-meta { grid-column: 1 / -1; flex-direction: row; align-items: center; flex-wrap: wrap; gap: 8px 16px; padding-top: 0; }
+  .essay-copy { grid-column: 1; }
+  .essay-action { grid-column: 2; grid-row: 2; width: 36px; min-height: 44px; }
+  .essay-copy h3 { font-size: 1.75rem; }
+  .essay-lead { padding: 32px 0; margin-top: 0; }
+  .essay-lead .essay-featured { flex-basis: 100%; }
+  .essay-lead h3 { font-size: clamp(2.2rem,8vw,3.2rem); }
+  .essay-lead .essay-copy { grid-column: 1 / -1; }
+  .essay-lead .essay-action { grid-row: 3; }
+}
+@media (max-width: 380px) { .writing-main .work-filters { gap: 14px; } .writing-main .work-filters button { font-size: .7rem; } }
+@media (prefers-reduced-motion: reduce) { .essay-copy h3, .essay-action { transition: none; } }
+
+/* Poetry is a distinct collection, independent of the essay topic filters. */
+.writing-poetry-jump { display: inline-flex; align-items: center; gap: 18px; min-height: 44px; margin-top: 12px; color: var(--color-accent); font-size: .78rem; border-bottom: 1px solid var(--color-border); }
+.writing-poetry-jump:hover { color: var(--color-accent-hover); border-color: currentColor; }
+.poetry-section { padding: 0 0 72px; background: var(--color-canvas); scroll-margin-top: 100px; }
+.poetry-panel { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 56px; align-items: center; padding: clamp(28px,4vw,48px); border: 1px solid var(--color-inverse-border); border-radius: 12px; background: var(--color-inverse-bg); color: var(--color-inverse-text); }
+.poetry-heading .page-kicker { margin: 0 0 22px; color: var(--color-inverse-gold); font-size: .65rem; letter-spacing: .12em; text-transform: uppercase; }
+.poetry-heading h2 { margin: 0; font-size: clamp(2.8rem,5vw,4.6rem); font-weight: 400; line-height: 1.05; letter-spacing: -.045em; }
+.poetry-heading h2 span { color: var(--color-inverse-gold); }
+.poetry-content { border-left: 1px solid var(--color-inverse-border); padding-left: 36px; }
+.poetry-intro { margin: 0 0 12px; font-family: var(--display-font) !important; font-size: clamp(1.3rem,2vw,1.65rem); line-height: 1.4; }
+.poetry-empty { margin: 0; color: var(--color-inverse-muted); font-size: .84rem; line-height: 1.75; }
+@media (max-width: 760px) {
+  .poetry-section { padding-bottom: 44px; scroll-margin-top: 80px; }
+  .poetry-panel { grid-template-columns: 1fr; gap: 28px; padding: 28px 24px; }
+  .poetry-content { padding: 24px 0 0; border-left: 0; border-top: 1px solid var(--color-inverse-border); }
+}
