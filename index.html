@@ -34,13 +34,16 @@
   <main class="home-main" id="main">
     <section class="home-hero" aria-labelledby="hero-title">
       <div class="seasonal-scene" data-season="fall" aria-hidden="true">
-        <img class="hero-background" src="img/seasons/me_fall.png" alt="" width="1448" height="1086" decoding="async" fetchpriority="high">
+        <picture>
+          <source media="(orientation: portrait)" srcset="img/seasons/mobile/fall_mobile_1440x2560.webp" width="1440" height="2560">
+          <img class="hero-background" src="img/seasons/desktop/fall_desktop_2560x1440.webp" alt="" width="2560" height="1440" decoding="async" fetchpriority="high">
+        </picture>
         <canvas class="scene-weather" data-scene-weather></canvas>
       </div>
       <div class="hero-content container"><h1 class="hero-title hero-title-image" id="hero-title"><span class="hero-name-wordmark" aria-hidden="true"></span><span class="sr-only">Mohammed Perves</span></h1><div class="hero-support"><p class="hero-positioning">Builder <span aria-hidden="true">·</span> Strategist <span aria-hidden="true">·</span> Investor</p><p class="sr-only">Mohammed Perves works across intelligent systems, enterprise technology, private equity, and capital markets.</p><a class="hero-link" href="about.html">Learn about me <i class="long-arrow" data-lucide="arrow-right" aria-hidden="true"></i></a></div></div>
     </section>
   </main>
   <footer class="site-footer"><div class="footer-inner container"><div class="footer-brand"><a class="brand-lockup" href="index.html" aria-label="Mohammed Perves, home"><span class="brand-seal" aria-hidden="true"><img src="img/MP_logo.png" alt="" width="1536" height="1024" decoding="async" loading="lazy"></span><span class="brand-name"><span>Mohammed</span><span>Perves</span></span></a><p class="footer-tagline">Builder · Strategist · Investor</p></div><div class="footer-right"><div class="footer-socials" aria-label="Footer controls"><button class="icon-button theme-button footer-theme-button" type="button" data-theme-toggle aria-label="Switch color theme"><i data-lucide="sun" data-theme-icon aria-hidden="true"></i></button><a class="social-circle" href="https://x.com/pmoe_1" target="_blank" rel="noreferrer" aria-label="X"><span class="brand-social-icon brand-x" aria-hidden="true"></span></a><a class="social-circle" href="https://www.linkedin.com/in/pmoe7/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><svg class="lucide lucide-linkedin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a><a class="social-circle" href="https://substack.com/@pmoe7" target="_blank" rel="noreferrer" aria-label="Substack"><span class="brand-social-icon brand-substack" aria-hidden="true"></span></a></div><span>© 2026 Mohammed Perves</span><span>New York</span><a href="mailto:pmuhamed10@gmail.com">Contact</a></div></div></footer>
-  <script src="js/seasonal-scene.js?v=13" defer></script>
+  <script src="js/seasonal-scene.js?v=17" defer></script>
 </body>
 </html>

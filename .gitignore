@@ -1,0 +1,18 @@
+# Local previews and scratch scripts
+/tmp/
+
+# Seasonal source exports (the site uses WebP)
+/img/seasons/desktop/*.png
+/img/seasons/mobile/*.png
+/img/seasons/*.zip
+
+# Local dependencies and environment settings
+node_modules/
+.env
+.env.*
+!.env.example
+
+# Operating system metadata
+.DS_Store
+Thumbs.db
+Desktop.ini

@@ -1315,7 +1315,11 @@ html[data-theme="dark"] .project-card-graphic { background: linear-gradient(135d
   pointer-events: none;
 }
 
-.hero-background { max-width: none; }
+.hero-background {
+  max-width: none;
+  object-fit: cover;
+  object-position: 40% center;
+}
 .scene-weather { z-index: 1; }
 
 @media (prefers-reduced-motion: reduce) {

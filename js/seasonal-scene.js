@@ -5,13 +5,14 @@
   if (!canvas) return;
   const scene = canvas.parentElement;
   const photo = scene.querySelector('img');
+  const portraitSource = scene.querySelector('source');
   // Northern Hemisphere seasons, using the site's New York time zone.
   // Each season uses its matching portrait artwork.
   const seasons = {
-    winter: { image: 'img/seasons/me_winter.png', effect: 'snow', count: 110, portrait: { eye: [562, 277], head: 168 }, lamps: [[.521, .329], [.968, .196]] },
-    spring: { image: 'img/seasons/me_spring.png', effect: 'rain', count: 150, portrait: { eye: [558, 279], head: 168 }, lamps: [[.534, .338], [.965, .19]] },
-    summer: { image: 'img/seasons/me_summer.png', effect: 'fireflies', count: 24, portrait: { eye: [574, 285], head: 170 }, lamps: [[.539, .342], [.973, .209]] },
-    fall: { image: 'img/seasons/me_fall.png', effect: 'leaves', count: 36, portrait: { eye: [576, 258], head: 170 }, lamps: [[.532, .321], [.968, .189]] }
+    winter: { effect: 'snow', count: 110, lamps: { desktop: [[.532, .395], [.614, .528]], mobile: [[.968, .18], [.17, .23]] } },
+    spring: { effect: 'rain', count: 150, lamps: { desktop: [[.54, .39], [.611, .499]], mobile: [[.968, .19], [.19, .25]] } },
+    summer: { effect: 'fireflies', count: 24, lamps: { desktop: [[.545, .39], [.619, .495]], mobile: [[.968, .19], [.195, .25]] } },
+    fall: { effect: 'leaves', count: 36, lamps: { desktop: [[.528, .398], [.624, .51]], mobile: [[.968, .18], [.17, .24]] } }
   };
   const monthFormatter = new Intl.DateTimeFormat('en-US', { timeZone: 'America/New_York', month: 'numeric' });
   // Optional preview links: ?season=fall, winter, spring, or summer.
@@ -22,30 +23,20 @@
   let imageFrame;
 
   function layoutPhoto() {
-    // Keep the photo and lamp/ripple coordinates in the same 1448 × 1086 frame.
     const viewportWidth = scene.clientWidth;
     const viewportHeight = scene.clientHeight;
-    const cover = Math.max(viewportWidth / 1448, viewportHeight / 1086);
-    const scale = 200 / season.portrait.head;
-    if (viewportWidth <= 760) {
-      // Natural cover crop on phones, with the face slightly left of center.
-      // Clamp the focal offset so no edge can expose the background.
-      imageFrame = {
-        width: 1448 * cover,
-        height: 1086 * cover,
-        x: Math.min(0, Math.max(viewportWidth - 1448 * cover,
-          viewportWidth * .45 - season.portrait.eye[0] * cover)),
-        y: (viewportHeight - 1086 * cover) * .5
-      };
-    } else {
-    // This common eye line leaves enough image above every portrait to fill the frame.
+    const portrait = viewportWidth <= viewportHeight;
+    const sourceWidth = portrait ? 1440 : 2560;
+    const sourceHeight = portrait ? 2560 : 1440;
+    // Match the picture source and cover with only the minimum necessary crop.
+    const fit = Math.max(viewportWidth / sourceWidth, viewportHeight / sourceHeight);
     imageFrame = {
-      width: 1448 * cover * scale,
-      height: 1086 * cover * scale,
-      x: (viewportWidth - 1448 * cover) * .4 + (580 - season.portrait.eye[0] * scale) * cover,
-      y: (viewportHeight - 1086 * cover) * .5 + (300 - season.portrait.eye[1] * scale) * cover
+      variant: portrait ? 'mobile' : 'desktop',
+      width: sourceWidth * fit,
+      height: sourceHeight * fit,
+      x: (viewportWidth - sourceWidth * fit) * .5,
+      y: (viewportHeight - sourceHeight * fit) * .5
     };
-    }
     photo.style.width = imageFrame.width + 'px';
     photo.style.height = imageFrame.height + 'px';
     photo.style.left = imageFrame.x + 'px';
@@ -62,7 +53,8 @@
     seasonName = name;
     season = seasons[name];
     scene.dataset.season = name;
-    photo.src = season.image;
+    portraitSource.srcset = 'img/seasons/mobile/' + name + '_mobile_1440x2560.webp';
+    photo.src = 'img/seasons/desktop/' + name + '_desktop_2560x1440.webp';
     layoutPhoto();
     return true;
   }
@@ -268,7 +260,7 @@
     context.globalCompositeOperation = 'screen';
     const pulse = .12 + Math.sin(elapsed * 1.3) * .025 + Math.sin(elapsed * 3.1) * .012;
     const glowSize = Math.min(width, height) * .085;
-    const lamps = season.lamps || [[.543, .377], [.965, .228]];
+    const lamps = season.lamps[imageFrame.variant];
     animateLamp(lamps[0][0], lamps[0][1], .035, 0);
     animateLamp(lamps[1][0], lamps[1][1], .047, 2.4);
     glow(.198, seasonName === 'fall' ? .29 : .332, glowSize * 1.4, pulse * .55);
