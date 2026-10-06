@@ -13,13 +13,10 @@
   const searchResults = document.querySelector('[data-search-results]');
   const filterButtons = document.querySelectorAll('[data-filter]');
   const filterItems = document.querySelectorAll('[data-category]');
-  let landingIntro = document.querySelector('[data-landing-intro]');
   const themeToggles = document.querySelectorAll('[data-theme-toggle]');
   const themeMedia = typeof window.matchMedia === 'function'
     ? window.matchMedia('(prefers-color-scheme: dark)')
     : null;
-  let aboutOpening = document.querySelector('[data-about-opening]');
-  let aboutOpeningSkip = document.querySelector('[data-about-opening-skip]');
   const aboutRevealItems = document.querySelectorAll('.about-reveal:not(.about-principle)');
   const aboutPrincipleItems = document.querySelectorAll('.about-principle');
   const aboutPrincipleToggles = document.querySelectorAll('[data-principle-toggle]');
@@ -112,81 +109,6 @@
 
     if (document.documentElement.dataset.themeSystem !== systemTheme) {
       useSystemTheme(systemTheme);
-    }
-  }
-
-  if (landingIntro) {
-    const landingReduceMotion = typeof window.matchMedia === 'function'
-      && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    let landingCleanupTimer = null;
-    const discardLandingIntro = () => {
-      if (!landingIntro) return;
-      window.clearTimeout(landingCleanupTimer);
-      landingIntro.remove();
-      landingIntro = null;
-    };
-
-    if (document.documentElement.classList.contains('intro-seen') || landingReduceMotion) {
-      discardLandingIntro();
-    } else {
-      try { sessionStorage.setItem('mp-intro-v2', '1'); } catch (error) { /* Storage is optional. */ }
-      landingIntro.addEventListener('animationend', (event) => {
-        if (event.target === landingIntro && event.animationName === 'intro-layer-exit') discardLandingIntro();
-      });
-      landingCleanupTimer = window.setTimeout(discardLandingIntro, 2500);
-    }
-  }
-
-  if (aboutOpening) {
-    const reduceMotion = typeof window.matchMedia === 'function'
-      && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const openingSeen = document.documentElement.classList.contains('about-intro-seen');
-    let openingFinished = false;
-    let openingTimer = null;
-    let openingCleanupTimer = null;
-    const preventOpeningScroll = (event) => { if (event.cancelable) event.preventDefault(); };
-
-    const handleOpeningKeydown = (event) => {
-      if (openingFinished) return;
-      if (event.key === 'Escape') finishAboutOpening(true);
-      if ([' ', 'ArrowDown', 'PageDown', 'End'].includes(event.key)) event.preventDefault();
-    };
-
-    const unlockAboutPage = () => {
-      document.documentElement.classList.remove('about-opening-active');
-      window.removeEventListener('wheel', preventOpeningScroll);
-      window.removeEventListener('touchmove', preventOpeningScroll);
-      document.removeEventListener('keydown', handleOpeningKeydown);
-    };
-
-    const discardAboutOpening = () => {
-      window.clearTimeout(openingCleanupTimer);
-      unlockAboutPage();
-      if (aboutOpening) aboutOpening.remove();
-      aboutOpening = null;
-      aboutOpeningSkip = null;
-    };
-
-    const finishAboutOpening = (skip) => {
-      if (openingFinished) return;
-      openingFinished = true;
-      window.clearTimeout(openingTimer);
-      if (skip) aboutOpening.classList.add('is-skipped');
-      openingCleanupTimer = window.setTimeout(discardAboutOpening, skip ? 370 : 640);
-    };
-
-    if (reduceMotion || openingSeen) {
-      discardAboutOpening();
-    } else {
-      try { sessionStorage.setItem('mp-about-intro-v1', '1'); } catch (error) { /* Storage is optional. */ }
-      document.documentElement.classList.add('about-opening-active');
-      window.scrollTo(0, 0);
-      window.addEventListener('wheel', preventOpeningScroll, { passive: false });
-      window.addEventListener('touchmove', preventOpeningScroll, { passive: false });
-      window.requestAnimationFrame(() => window.requestAnimationFrame(() => aboutOpening.classList.add('is-running')));
-      openingTimer = window.setTimeout(() => finishAboutOpening(false), 1580);
-      aboutOpeningSkip && aboutOpeningSkip.addEventListener('click', () => finishAboutOpening(true));
-      document.addEventListener('keydown', handleOpeningKeydown);
     }
   }
 
